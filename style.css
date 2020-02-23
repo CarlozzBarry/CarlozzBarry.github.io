@@ -12,4 +12,5 @@
 .my_graph{
 	width: 1500px;
 	height: 450px;
+	margin: solid, 1px, #000;
 }
