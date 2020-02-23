@@ -29,14 +29,14 @@
 
     //set the dimensions and margins of the graph
     var margin = {top: 30, right: 10, bottom: 10, left: 0}
-    var width = 500 - margin.left - margin.right
+    var width = 500 - margin.left - margin.right;
     var height = 400 - margin.top - margin.bottom;
     
     // append the svg object to the body of the page
     var svg = d3.select("#my_viz")
     .append("svg")
-      .attr("width", width)
-      .attr("length", length)
+      .attr("width", width + margin.left + margin.right)
+      .attr("heigth", heigth + margin.top + margin.bottom)
     .append("svg")
       .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
