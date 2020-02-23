@@ -50,7 +50,7 @@
       // Extract the list of dimensions we want to keep in the plot. Here I keep all except the column called Species
       
       
-      var dimensions = d3.keys(data[0]);
+      var dimensions = Object.keys(data[0]);
     
       // For each dimension, I build a linear scale. I store all in a y object
       var y = {}
