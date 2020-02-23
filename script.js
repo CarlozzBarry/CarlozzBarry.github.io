@@ -16,7 +16,7 @@ var priceline = d3.line()
     .y(function(d) { return y(d.price); });
 
 // Adds the svg canvas
-var lineSvg = d3.select("#linesVis")
+var lineSvg = d3.select("#my_viz")
     .append("svg")
         .attr("width", lwidth + lmargin.left + lmargin.right)
         .attr("height", lheight + lmargin.top + lmargin.bottom)
