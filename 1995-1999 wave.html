@@ -134,12 +134,12 @@ d3.csv("1995-1999 Wave - Foglio1.csv", function(flowers) {
         });
   });
 
-  /*var flowerAlises = [];
+  var flowerAlises = [];
   flowers.forEach(function(flower, i) {
     flowerAlises[i] = flower.Alias;
   });
   console.log(flowerAlises);
-  // Create a scale and brush for each trait.*/
+  // Create a scale and brush for each trait.
   traits.forEach(function(d) {
     // Coerce values to numbers.
     flowers.forEach(function(p) { p[d] = +p[d]; });
