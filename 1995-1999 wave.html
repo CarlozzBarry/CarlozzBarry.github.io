@@ -35,8 +35,7 @@
     // append the svg object to the body of the page
     var svg = d3.select("#my_viz")
     .append("svg")
-      .attr("width", width - width.margin)
-      .attr("height", height - height.margin)
+      .attr("length", width - width.margin)
     .append("canvas")
       .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
