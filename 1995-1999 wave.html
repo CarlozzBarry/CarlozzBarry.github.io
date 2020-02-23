@@ -113,16 +113,16 @@ var line = d3.svg.line(),
     axis = d3.svg.axis().orient("left"),
     foreground;
 
-var svg = d3.select("body").append("svg:svg")
+var svg = d3.select("#my_viz").append("svg:svg")
     .attr("width", w + m[1] + m[3])
     .attr("height", h + m[0] + m[2])
     .append("svg:g")
     .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
 
-d3.csv("dataset.csv", function(flowers) {
+d3.csv("1995-1999 Wave - Foglio1.csv", function(flowers) {
 
   flowers.forEach(function(flower) {
-    d3.select("#text_container")
+    d3.select("#my_viz")
       .append("p")
         .attr("id", flower.Alias)
         .style("display", "none")
