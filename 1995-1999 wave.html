@@ -44,7 +44,9 @@
     
 
     // Parse the Data
-    d3.csv("1995-1999 Wave - Foglio1.csv", function(data) {
+    data = d3.csv("1995-1999 Wave - Foglio1.csv");
+    
+    function data(data) {
     
       // Extract the list of dimensions we want to keep in the plot. Here I keep all except the column called Species
       dimensions = data.columns;
@@ -94,7 +96,7 @@
           .attr("y", -9)
           .text(function(d) { return d; })
           .style("fill", "black")
-    })
+    }
     
     </script>
 </html> 
