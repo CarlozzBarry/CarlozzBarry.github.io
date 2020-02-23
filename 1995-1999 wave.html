@@ -36,10 +36,10 @@
     var svg = d3.select("#my_viz")
     .append("svg")
       .attr("width", width + margin.left + margin.right)
-      .attr("heigth", heigth + margin.top + margin.bottom)
-    .append("svg")
-      .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")");
+      .attr("heigth", heigth + margin.top + margin.bottom);
+    //.append("svg")
+      //.attr("transform",
+        //    "translate(" + margin.left + "," + margin.top + ")");
     
     // Parse the Data
     d3.csv("1995-1999 Wave - Foglio1.csv", function(data) {
