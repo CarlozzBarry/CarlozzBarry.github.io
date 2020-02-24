@@ -11,11 +11,10 @@ body{
 	font-weight: bold;
 	background-color: yellow;
 	color: blue;
-
-	border-color: solid, black, 1px;
+	border: solid, black, 1px;
 }
 .card{
-	position: fixed;
+	position: center;
 	width: 500px;
 	height: 500px;
 	font-family: 'Courier New', Courier, monospace;
