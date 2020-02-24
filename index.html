@@ -63,6 +63,9 @@
 				  return d3.line()(dimensions.map(function(p) { return [x(p), y[p](d[p])]; }));
 			  }
 			
+			  function randomColor(){
+				  return rand("#000000","#FFFFFF");
+			  }
 			  // Draw the lines
 			  svg
 				.selectAll("myPath")
@@ -70,7 +73,7 @@
 				.enter().append("path")
 				.attr("d",  path)
 				.style("fill", "none")
-				.style("stroke", "#69b3a2")
+				.style("stroke", randomColor(d))
 				.style("opacity", 0.5)
 			
 			  // Draw the axis:
