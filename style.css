@@ -14,7 +14,7 @@ body{
 	border: solid, black, 1px;
 }
 .card{
-	position: center;
+	text-align: center;
 	width: 500px;
 	height: 500px;
 	font-family: 'Courier New', Courier, monospace;
