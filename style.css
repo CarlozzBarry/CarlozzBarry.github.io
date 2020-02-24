@@ -14,3 +14,10 @@ body{
 
 	border-color: solid, black, 1px;
 }
+.card{
+	position: fixed;
+	width: 500px;
+	height: 500px;
+	font-family: 'Courier New', Courier, monospace;
+	border: solid, black, 2px;
+}
