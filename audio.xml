@@ -19,7 +19,7 @@
 	</Chain>
 
 	<Chain>
-		<OscillatorNode type="sine">
+		<OscillatorNode type="sawtooth">
 		<frequency follow="relY" map="100,0,100,1000"></frequency>
 	</OscillatorNode>
 	<GainNode>
