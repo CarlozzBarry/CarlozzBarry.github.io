@@ -20,7 +20,7 @@
 	<Chain >
 
 		<OscillatorNode type="sine">
-			<frequency follow="relX" map="50,100,100,1000"></frequency>
+			<frequency follow="relX" map="0,100,100,1000"></frequency>
 		</OscillatorNode>
 		 
 		<BiquadFilterNode type="lowpass">
