@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio version="1.0" timeUnit="ms" interactionArea="#touchArea" gain="-10dB">
+	
+<mixer>
+	<Chain portamento="50">
+
+		<OscillatorNode type="sine">
+			<frequency follow="relX" map="0,100,100,1000"></frequency>
+		</OscillatorNode>
+		 
+		
+		<GainNode>
+			<gain>
+				<Envelope adsr="100,100,50,20" trig="pointer" max="1"></Envelope>
+			</gain>
+		</GainNode>
+		
+
+	</Chain>
+
+	<Chain>
+		<OscillatorNode type="sawtooth">
+			<frequency follow="relY" map="100,0,100,1000"></frequency>
+		</OscillatorNode>
+<BiquadFilterNode type="lowpass">
+			<frequency follow="relY" map="0,100,0,5000, 3"></frequency>
+		</BiquadFilterNode>
+
+		<GainNode>
+			<gain>
+				<Envelope adsr="100,100,50,20" trig="pointer" max="1"></Envelope>
+			</gain>
+		</GainNode>
+
+	</Chain>
+
+	<Chain>
+
+		<OscillatorNode type="square">
+			<frequency follow="relX" map="100,0,100,1000"></frequency>
+		</OscillatorNode>
+		 	<GainNode>
+			<gain>
+				<Envelope adsr="100,100,50,20" trig="pointer" max="1"></Envelope>
+			</gain>
+		</GainNode>
+	</Chain>
+
+	
+</mixer>
+</Audio>
