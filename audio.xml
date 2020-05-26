@@ -23,7 +23,9 @@
 			<frequency follow="relX" map="50,100,100,1000"></frequency>
 		</OscillatorNode>
 		 
-		
+		<BiquadFilterNode type="lowpass">
+			
+		</BiquadFilterNode>
 		<GainNode>
 			<gain>
 				<Envelope adsr="100,100,50,20" trig="pointer" max="1"></Envelope>
