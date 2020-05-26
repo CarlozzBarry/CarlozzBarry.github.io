@@ -17,6 +17,14 @@
 		
 
 	</Chain>
+
+	<Chain>
+		<OscillatorNode type="sine">
+		<frequency></frequency>
+	</OscillatorNode>
+	</Chain>
+
+
 	<Chain >
 
 		<OscillatorNode type="sine">
@@ -34,24 +42,12 @@
 		
 
 	</Chain>
-	<Chain>
-		<OscillatorNode type="sawtooth">
-			<frequency follow="relY" map="100,0,100,1000"></frequency>
-		</OscillatorNode>
-
-
-		<GainNode>
-			<gain>
-				<Envelope adsr="100,100,50,20" trig="pointer" max="1"></Envelope>
-			</gain>
-		</GainNode>
-
-	</Chain>
+	
 
 	<Chain>
 
 		<OscillatorNode type="square">
-			<frequency follow="relX" map="100,0,100,1000"></frequency>
+			<frequency follow="relX" map="0,100,100,1000"></frequency>
 		</OscillatorNode>
 		 	<GainNode>
 			<gain>
