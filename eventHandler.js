@@ -45,7 +45,7 @@ function compareButtonClick(event) {
   compare(webAudioXML.lastGesture, webAudioXML.getSequence("_storedGesture"))
     ? ((touchArea.style.cssText = "border-color:green;"),
       (touchArea.innerHTML =
-        "VERY GOOD! <br/> The sounds and gestures are close enough!"))
+        "VERY GOOD! <br/> The sound you mimicked is pretty close to the original!"))
     : ((touchArea.style.cssText = "border-color:red;"),
       (touchArea.innerHTML = "Not at all! <br/> Try again, you'll be luckier!"));
   event.preventDefault();
