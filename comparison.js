@@ -1,5 +1,5 @@
 const timeMargin = 70; // Within this margin the time value is considered correct
-const positionMargin = 10; // Within this margin the coordinates is considered correct
+const positionMargin = 15; // Within this margin the coordinates is considered correct
 const ratioMargin = 0.50; // The percentage of data points that can be wrong
 
 /**
