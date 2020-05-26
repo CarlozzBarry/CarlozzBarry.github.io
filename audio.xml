@@ -17,7 +17,21 @@
 		
 
 	</Chain>
+	<Chain portamento="50">
 
+		<OscillatorNode type="sine">
+			<frequency follow="relX" map="50,100,100,1000"></frequency>
+		</OscillatorNode>
+		 
+		
+		<GainNode>
+			<gain>
+				<Envelope adsr="100,100,50,20" trig="pointer" max="1"></Envelope>
+			</gain>
+		</GainNode>
+		
+
+	</Chain>
 	<Chain>
 		<OscillatorNode type="sawtooth">
 			<frequency follow="relY" map="100,0,100,1000"></frequency>
