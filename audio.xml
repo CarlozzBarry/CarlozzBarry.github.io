@@ -20,7 +20,7 @@
 
 	<Chain>
 		<OscillatorNode type="sine">
-		<frequency follow="relY" map="100,50,100,1000"></frequency>
+		<frequency follow="relY" map="100,0,100,1000"></frequency>
 	</OscillatorNode>
 	<GainNode>
 			<gain>
@@ -53,7 +53,7 @@
 	<Chain>
 
 		<OscillatorNode type="square">
-			<frequency follow="relX" map="0,100,100,1000"></frequency>
+			<frequency follow="relY" map="100,0,100,1000"></frequency>
 		</OscillatorNode>
 		 	<GainNode>
 			<gain>
