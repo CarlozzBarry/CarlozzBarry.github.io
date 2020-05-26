@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="index.css" />
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Comparing sounds</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="instructions">
+        <div>
+          <h3>Comparing sounds using WebAudioXML</h3>
+          Try to mimic the stored sound by making gestures on the play area!
+        </div>
+        <div id="buttons">
+          <button id="playButton">
+            1. Play sound to mimic
+          </button>
+          <button id="compareButton" disabled>
+            3. Play my last sound and compare
+          </button>
+        </div>
+      </div>
+      <div id="touchArea">
+        2. Tap and slide to play
+      </div>
+    </div>
+
+    <script src="WebAudioXML.js" data-source="audio.xml"></script>
+    <script src="eventData.js"></script>
+    <script src="comparison.js"></script>
+    <script src="eventHandler.js"></script>
+  </body>
+</html>
