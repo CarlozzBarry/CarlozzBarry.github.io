@@ -6,7 +6,7 @@ body{
 
 @font-face{
 	font-family: JazzTextExtended;
-	src: url("https://carlozzbarry.github.io/JazzText_Regular/JAZZTEXT.ttf")
+	src: url(JAZZTEXT.ttf)
 
 }
 .container{
