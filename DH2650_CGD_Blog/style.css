@@ -1,8 +1,3 @@
-body{
-
-	font-family: JazzTextExtended;
-	font-size: 13px;
-}
 
 @font-face{
 	font-family: JazzTextExtended;
@@ -10,24 +5,35 @@ body{
 
 }
 .container{
-	font-family: JazzTextExtended;
-	text-align: justify;
+
 	border: 3px solid #FF0000;
-	margin-left: 3px solid black;
-	margin-right: 3px solid black;
-
-	padding: 2px solid black;
 }
-
+.pagetitle{
+	text-align: center; font-size: 3em; 
+}
 .header{
-	background-color: yellow;
 	font-family: JazzTextExtended;
+	background-color: yellow;
 	text-align: center; 
+	border: 3px solid black;
 }
 .post{
+	padding-right: 14px;
+	padding-left: 14px;
+	border: 3px solid orange;
 	background-color: lightblue;
 }
 .post-content{
-	font-size: 1.35em;
+	text-align: justify;
+	font-size: 1.15em;
 	padding: 2px;
 }
+
+.date{
+	font-family: JazzTextExtended;
+	text-align: center; 
+	font-size: 1.5em; 
+	font-weight: bold; 
+	
+}
+
