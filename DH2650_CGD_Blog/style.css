@@ -1,15 +1,18 @@
 body{
 
-	font-family: Papyrus;
+	font-family: JazzTextExtended;
 	font-size: 13px;
 }
 
 
-.post{
+.container{
 	text-align: justify;
+	
+	padding: 2px solid black;
+}
+.post{
 	border: 3px solid #FF0000;
 	margin-left: 3px solid black;
 	margin-right: 3px solid black;
 	background-color: lightblue; 
-	padding: 10px solid;
 }
