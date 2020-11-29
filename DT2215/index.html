@@ -22,13 +22,15 @@
 		
 		.littleCircles{
 			align-content: center;
-			padding: 5px;
-			border: 1px solid black;
+			padding: 15px;
+			border: 5px black;
 		}
 		#bigCircles{
-			align-content: center;
-			padding: 5px;
-			border: 5px solid black;
+			object-position: center;
+			padding-left: 110px;
+			padding-right: 110px;
+			border: 5px  black;
+			padding-top: 20px;
 		}
 
 		.picture{
@@ -36,7 +38,20 @@
 		}
 
 		td{
-			padding: 5px;
+			padding-left: 5px;
+			padding-right: 5px;
+			padding-top: 50px;
+		}
+
+		.container{
+			border: 5px solid black;
+		}
+
+		.center {
+			  display: block;
+	    	  margin-left: auto;
+			  margin-right: auto;
+			  width: 50%;
 		}
 
 	</style>
@@ -44,85 +59,88 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<img class="picture" heigth="500" width="500" src="" alt="Future Landscape picture shall be put here">
+			<img class="center" heigth="50%" width="50%" src="future_landscape.jpg" alt="Future Landscape picture shall be put here" style="padding: 20px; border-left: 5px black solid; border-right: 5px black solid; border-bottom: 5px black solid;">
 		</div>
-		<div class="row" style="position: center;">
-			
-			<div class="col-sm-4" id="bigCircles">
-				<svg width="100" heigth="100" position="center">
-					<circle cx="50" cy="50" r="50" style="stroke:black; fill:red; display: solid;">
-				</svg>			
-			</div> 
-			<div class="col-sm-4" id="bigCircles">
-				<svg width="100" heigth="100" position="center">
-					<circle cx="50" cy="50" r="50" style="stroke:black; fill:blue; display: solid;">
-				</svg>
-			</div> 
-			<div class="col-sm-4" id="bigCircles">
-				<svg width="100" heigth="100" position="center">
-					<circle cx="50" cy="50" r="50" style="stroke:black; fill:green; display: solid;">
-				</svg>
-			</div> 
-		</div>
-		<div class="row" style="position: center;">
-			<div class="col-sm-4">
-				<table width="33%" class="littleCircles">
-					<td>
-						<svg width="100" heigth="100" position="center">
-							<circle cx="50" cy="50" r="50" style="stroke:black; fill:red; display: solid;">
-						</svg>
-					</td>
-					<td>
-						<svg width="100" heigth="100" position="center">
-							<circle cx="50" cy="50" r="50" style="stroke:black; fill:red; display: solid;">
-						</svg>
-					</td>
-					<td>
-						<svg width="100" heigth="100" position="center">
-							<circle cx="50" cy="50" r="50" style="stroke:black; fill:red; display: solid;">
-						</svg>
-					</td>
-				</table>
+		
+		<div class="row">
+			<div class="interface" style="
+			padding-top: 20px;">
+				<div class="col-sm-4" id="bigCircles" >
+					<svg width="150" heigth="150">
+						<circle cx="75" cy="75" r="70" style="stroke:black; fill:red; display: solid; position: center;">
+					</svg>			
+				</div> 
+				<div class="col-sm-4" id="bigCircles">
+					<svg width="150" heigth="150">
+						<circle cx="75" cy="75" r="70" style="stroke:black; fill:blue; display: solid; position: center;">
+					</svg>
+				</div> 
+				<div class="col-sm-4" id="bigCircles">
+					<svg width="150" heigth="150">
+						<circle cx="75" cy="75" r="70" style="stroke:black; fill:green; display: solid; position: center;">
+					</svg>
+				</div> 
 			</div>
-			<div class="col-sm-4">
+			<div class="row" style="position: center; padding-left: 15px;">
+				<div class="col-sm-4" style="padding: 15px;"class="littleCircles">
+					<table width="33%" class="littleCircles">
+						<td>
+							<svg width="100" heigth="100" position="center">
+								<circle cx="50" cy="50" r="50" style="stroke:black; fill:red; display: solid; position: center;">
+							</svg>
+						</td>
+						<td>
+							<svg width="100" heigth="100" position="center">
+								<circle cx="50" cy="50" r="50" style="stroke:black; fill:red; display: solid; position: center;">
+							</svg>
+						</td>
+						<td>
+							<svg width="100" heigth="100" position="center">
+								<circle cx="50" cy="50" r="50" style="stroke:black; fill:red; display: solid; position: center;">
+							</svg>
+						</td>
+					</table>
+				</div>
+				<div class="col-sm-4" style="padding: 15px;" class="littleCircles">
+					<table width="33%" class="littleCircles">
+						<td>
+							<svg width="100" heigth="100" position="center">
+								<circle cx="50" cy="50" r="50" style="stroke:black; fill:blue; display: solid;  position: center;">
+							</svg>
+						</td>
+						<td>
+							<svg width="100" heigth="100" position="center">
+								<circle cx="50" cy="50" r="50" style="stroke:black; fill:blue; display: solid;  position: center;">
+							</svg>
+						</td>
+						<td>
+							<svg width="100" heigth="100" position="center">
+								<circle cx="50" cy="50" r="50" style="stroke:black; fill:blue; display: solid;  position: center;">
+							</svg>
+						</td>
+					</table>				
+	 
+				</div>	
+				<div class="col-sm-4" style="padding: 15px;" class="littleCircles">		
 				<table width="33%" class="littleCircles">
-					<td>
-						<svg width="100" heigth="100" position="center">
-							<circle cx="50" cy="50" r="50" style="stroke:black; fill:blue; display: solid;">
-						</svg>
-					</td>
-					<td>
-						<svg width="100" heigth="100" position="center">
-							<circle cx="50" cy="50" r="50" style="stroke:black; fill:blue; display: solid;">
-						</svg>
-					</td>
-					<td>
-						<svg width="100" heigth="100" position="center">
-							<circle cx="50" cy="50" r="50" style="stroke:black; fill:blue; display: solid;">
-						</svg>
-					</td>
-				</table>				
- 
-			</div>	
-			<div class="col-sm-4">		
-			<table width="33%" class="littleCircles">
-					<td>
-						<svg width="100" heigth="100" position="center">
-							<circle cx="50" cy="50" r="50" style="stroke:black; fill:green; display: solid;">
-						</svg>
-					</td>
-					<td>
-						<svg width="100" heigth="100" position="center">
-							<circle cx="50" cy="50" r="50" style="stroke:black; fill:green; display: solid;">
-						</svg>
-					</td>
-					<td>
-						<svg width="100" heigth="100" position="center">
-							<circle cx="50" cy="50" r="50" style="stroke:black; fill:green; display: solid;">
-						</svg>
-					</td>
-				</table>				
- 
+						<td>
+							<svg width="100" heigth="100" position="center">
+								<circle cx="50" cy="50" r="50" style="stroke:black; fill:green; display: solid; position: center;">
+							</svg>
+						</td>
+						<td>
+							<svg width="100" heigth="100" position="center">
+								<circle cx="50" cy="50" r="50" style="stroke:black; fill:green; display: solid;  position: center;">
+							</svg>
+						</td>
+						<td>
+							<svg width="100" heigth="100" position="center">
+								<circle cx="50" cy="50" r="50" style="stroke:black; fill:green; display: solid;  position: center;">
+							</svg>
+						</td>
+					</table>				
+	 
+				</div>
 			</div>
 		</div>
 	</div>
