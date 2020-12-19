@@ -24,8 +24,7 @@
 			.topnav {
 		  background-color: orange;
 		  overflow: hidden;
-		  padding-left: 5em;
-		  padding-right: 5em;
+		  padding-left: 10px;
 		}
 
 		/* Style the links inside the navigation bar */
@@ -52,14 +51,23 @@
 
 		#plot{
 		  background-color: #fbbb32;  
-		  background-size: 100%;
+		}
+
+		#video-description{
+			background-color: orange;
+		}
+
+		#video{
+			background-color: orange;
 		}
 		@font-face{
 		  font-family: JazzTextExtended;
 		  src: url('JAZZTEXT.TTF');
 
 		}
-
+		.row{
+			padding: 0px;
+		}
 		h1{
 			font-size: 4.5em;
 		}
@@ -67,11 +75,20 @@
 			width: 100%;
 		}
 
-		.header{
-		  background-image: url('initial_landscape.png');
-		  width: 100%;
-		  height: 100%;
-		  padding: 0px;
+		#coverphoto{
+			background-image: url('coverphoto.png');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+		    width: 100%;
+	    	height: 100%;
+	        padding: 0px;
+		}
+		#team{
+			background-color: lightblue;
+		}
+		#footer{
+			background-color: orange; 
 		}
 	</style>
 </head>
@@ -87,64 +104,74 @@
 </div>
 
 <div class="container">
-	<div class="header" style="padding: 2em;">
-			<div class="col-sm-12">
-				<h1 style="text-align: center; position: center; font-family: Papyrus; font-size: 4em;" id="coverphoto"> <b>DESERTIFICATION</b><br><br>
-				<em style="font-size: 0.75em;">The world is at stake, but you can still save it</em></h1>
+	<div class="row">
+		<div class="col-sm-12" id="coverphoto">
+				<h1 style="text-align: center; position: center; font-family: Acme; font-size: 4em;"> <b>DESERTIFICATION</b><br>
+				<em style="font-style: plain; font-size: 0.75em;">The world is at stake, but you can still save it</em></h1>
 			</div>
 		</div>
-	<div>
+	<div class="row">
 		<div class="col-sm-12" id="plot">
-	<h1 style=" text-align: center; font-family: Chiller; font-size: 3.75em;">Story</h1>
-			<p style=" text-align: justify; padding-left: 1em; padding-right: 1em; font-size: 1.5em; font-family: Verdana;">
+	<h1 style=" text-align: center; font-family: Acme; font-size: 3.75em;">STORY<br>~~~~~~~~~~</h1>
+			<p style=" text-align: justify; padding-left: 1em; padding-right: 1em; padding-bottom: 1.75em; font-size: 1.5em; font-family: Verdana;">
 				The world has been nearly totally desertified, and only a small portion of it has been spared from this absolute destruction. You, the player, are one of the last survivors of a decimated humanity, thus bearing the burden of recreating a living and pleasant enviroment, for the Earth shall regain liveability and a flourishing vegetation.
 				
 			</p>
 
 		</div>
 	</div>
-	<div style="background-color: orange;">
-		<div class="col-sm-8" id="video" >
-			<h1 style="font-size: 3.75em; font-family: Chiller">A little gameplay</h1>
+	<div class="row">
+		<div class="col-sm-8" id="video">
+			<h1 style="font-size: 3.75em; font-family: Acme; text-align: center;">A LITTLE GAMEPLAY<br>~~~~~~~~~~</h1>
 			<div>
-				<video width="100%" height="100%" controls>
+				<video width="100%" height="100%" controls style="padding-bottom: 15px; padding-left: 15px; padding-right: 15px;">
 				  <source src="videolemons.mp4" type="video/mp4">
 			    </video> 
 			</div>
 		</div>
-		<div class="col-sm-4" id="video-description">
-			<h1 style=" text-align: center;font-family: Chiller; font-size: 3.75em;">Game dynamics</h1>
-			<p style=" text-align: center; font-size: 1.5em; font-family: Verdana;">
-				The player
+		<div class="col-sm-4" id="video-description" style="height: 100%; padding-right: 15px;">
+			<h1 style=" text-align: center;font-family: Acme; font-size: 3.75em;">GAME DYNAMICS<br>~~~~~~~~~~</h1>
+			<p style=" text-align: justify; font-size: 1.5em; font-family: Verdana; padding-bottom: 6px;">
+				The player wanders around for a desertified wasteland, foreseeing in the landscape an oasis. Thus, s/he will move towards it, and get the instructions for his/her first mission. 
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 				   </p>
 			
 		</div>
 	</div>
-
+	<div class="row">
+		<div class="col-sm-12" id="features">
+			<h1 style="text-align: center; font-family: Acme; background-color: lightgreen; font-size: 3.75em;">TECHNICAL FEATURES<br>~~~~~~~~~~</h1>
+			
+		</div>
+	</div>
 	<div class="row">
 		<div class="col-sm-12" id="team">
-			<h1 style="text-align: center;font-family: Chiller; font-size: 3.75em;">THE TEAM</h1>
+			<h1 style="text-align: center;font-family: Acme; font-size: 3.75em;">THE TEAM<br>~~~~~~~~~~</h1>
 			<div class="col-sm-3">
-				<h3 style="text-align: center;">Robin Dahlqvist</h3>
+				<h3 style="text-align: center; font-family: Acme;">Robin Dahlqvist</h3>
 				<p style="text-align: center; font-family: Brush Script MT; font-size: 20px;">Project lead - Game modelling and coding</p>
 			</div>
 			<div class="col-sm-3">
-				<h3 style="text-align: center;">Nina Nokelainen</h3>
+				<h3 style="text-align: center; font-family: Acme;">Nina Nokelainen</h3>
 				<p style="text-align: center; font-family: Brush Script MT; font-size: 20px;">Audio coding and Implementation</p>
 			</div>
 			<div class="col-sm-3">
-				<h3 style="text-align: center;">Carlo Barone</h3>
+				<h3 style="text-align: center; font-family: Acme;">Carlo Barone</h3>
 				<p style="text-align: center; font-family: Brush Script MT; font-size: 20px;">Audio synthesis and Website</p>
 			</div>
 			<div class="col-sm-3">
-				<h3 style="text-align: center;">Adel Bavey</h3>
+				<h3 style="text-align: center; font-family: Acme;">Adel Bavey</h3>
 				<p style="text-align: center; font-family: Brush Script MT; font-size: 20px;">Documentation</p>
 			</div>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-sm-12" id="footer">
+			<h1 style="padding: 1em; text-align: center; font-family: Acme;">Thanks for playing!</h1>
+		</div>
 	</div>
-
 </div>
+
 
 </body>
 </html>
