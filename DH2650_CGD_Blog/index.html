@@ -4,59 +4,117 @@
 	<title>Desertification</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="homepagestyle.css">
-	<link rel="icon" href="">
+	<link rel="icon" href="initial_landscape_AWb_1.ico">
+	<link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
 	 <!-- Compiled and minified CSS-->
     
      <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
    <!-- Compiled and minified JavaScript--> 
     
      <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-<!-- jQuery library 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
--->
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+		<!-- jQuery library 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		-->
+		<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 		
+
+	<style type="text/css">
+			.topnav {
+		  background-color: orange;
+		  overflow: hidden;
+		  padding-left: 5em;
+		  padding-right: 5em;
+		}
+
+		/* Style the links inside the navigation bar */
+		.topnav a {
+		  float: left;
+		  color: red;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		}
+
+		/* Change the color of links on hover */
+		.topnav a:hover {
+		  background-color: red;
+		  color: orange;
+		}
+
+		/* Add a color to the active/current link */
+		.topnav a.active {
+		  background-color: #4CAF50;
+		  color: white;
+		}
+
+		#plot{
+		  background-color: #fbbb32;  
+		  background-size: 100%;
+		}
+		@font-face{
+		  font-family: JazzTextExtended;
+		  src: url('JAZZTEXT.TTF');
+
+		}
+
+		h1{
+			font-size: 4.5em;
+		}
+		.container{
+			width: 100%;
+		}
+
+		.header{
+		  background-image: url('initial_landscape.png');
+		  width: 100%;
+		  height: 100%;
+		  padding: 0px;
+		}
+	</style>
 </head>
-</head>
+
 <body>
  <div class="topnav">
-  <a href="#plot">The story</a>
-  <a href="#video">The game</a>
-  <a href="#features">The features</a>
-  <a href="#team">The team</a>
-  <a href="https://drive.google.com/file/d/1hOQ3msoNphn2lDLy_kMKXwz2OW6etIMZ/view">Get the game demo!</a>
-  <a href="blog.html">Go to Carlo's blog</a>
+  <a href="#plot"><em style="font-family: Acme;">The story</em></a>
+  <a href="#video"><em style="font-family: Acme;">The game</em></a>
+  <a href="#features"><em style="font-family: Acme;">The features</em></a>
+  <a href="#team"><em style="font-family: Acme;">The team</em></a>
+  <a href="https://drive.google.com/file/d/1hOQ3msoNphn2lDLy_kMKXwz2OW6etIMZ/view"><em style="font-family: Acme;">Get the game demo!</em></a>
+  <a href="blog.html"><em style="font-family: Acme;">Go to Carlo's blog</em></a>
 </div>
 
 <div class="container">
 	<div class="header" style="padding: 2em;">
-			<div style="background-image: url('intial_landscape.png');">
-				<h1 style="text-align: center; position: center; font-family: Papyrus; font-size: 3.5em;" id="coverphoto"> <b>DESERTIFICATION</b><br><br>
+			<div class="col-sm-12">
+				<h1 style="text-align: center; position: center; font-family: Papyrus; font-size: 4em;" id="coverphoto"> <b>DESERTIFICATION</b><br><br>
 				<em style="font-size: 0.75em;">The world is at stake, but you can still save it</em></h1>
 			</div>
 		</div>
-	<div class="row">
+	<div>
 		<div class="col-sm-12" id="plot">
-	<h1 style=" text-align: center; font-family: Chiller; font-size: 3em;">Story</h1>
-			<p style=" text-align: justify; padding-left: 1em; padding-right: 1em; font-size: 1.5em;">
+	<h1 style=" text-align: center; font-family: Chiller; font-size: 3.75em;">Story</h1>
+			<p style=" text-align: justify; padding-left: 1em; padding-right: 1em; font-size: 1.5em; font-family: Verdana;">
 				The world has been nearly totally desertified, and only a small portion of it has been spared from this absolute destruction. You, the player, are one of the last survivors of a decimated humanity, thus bearing the burden of recreating a living and pleasant enviroment, for the Earth shall regain liveability and a flourishing vegetation.
-				<button>
 				
-			</button>
 			</p>
 
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-sm-8" id="video">
-			<h1 style="font-size: 3em; font-family: Chiller">A little gameplay</h1>
+	<div style="background-color: orange;">
+		<div class="col-sm-8" id="video" >
+			<h1 style="font-size: 3.75em; font-family: Chiller">A little gameplay</h1>
+			<div>
+				<video width="100%" height="100%" controls>
+				  <source src="videolemons.mp4" type="video/mp4">
+			    </video> 
+			</div>
 		</div>
 		<div class="col-sm-4" id="video-description">
-			<h1 style=" text-align: center;font-family: Chiller; font-size: 2.5em;">Game dynamics</h1>
-			<p style=" text-align: center;">
+			<h1 style=" text-align: center;font-family: Chiller; font-size: 3.75em;">Game dynamics</h1>
+			<p style=" text-align: center; font-size: 1.5em; font-family: Verdana;">
 				The player
 				   </p>
 			
@@ -65,7 +123,7 @@
 
 	<div class="row">
 		<div class="col-sm-12" id="team">
-			<h1 style="text-align: center;font-family: Chiller; font-size: 3em;">THE TEAM</h1>
+			<h1 style="text-align: center;font-family: Chiller; font-size: 3.75em;">THE TEAM</h1>
 			<div class="col-sm-3">
 				<h3 style="text-align: center;">Robin Dahlqvist</h3>
 				<p style="text-align: center; font-family: Brush Script MT; font-size: 20px;">Project lead - Game modelling and coding</p>
