@@ -69,12 +69,8 @@
 			background-color: orange; 
 		}
 
-    
-@font-face{
-  font-family: JazzTextExtended;
-  src: url(jazztext.ttf)
 
-}
+
 
 
 .container{
@@ -98,6 +94,7 @@
   padding-left: 14px;
   border: 3px solid orange;
   background-color: lightblue;
+  font-family: Verdana;
 }
 .post-content{
   text-align: justify;
@@ -106,7 +103,7 @@
 }
 
 .date{
-  font-family: Papyrus;
+  font-family: Acme;
   text-align: center; 
   font-size: 1.5em; 
   font-weight: bold; 
