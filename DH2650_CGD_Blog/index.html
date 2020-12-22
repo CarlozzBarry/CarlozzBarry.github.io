@@ -88,13 +88,25 @@
 			background-color: orange; 
 		}
 
-		.center{
+		#team .center{
 			height: 40%;
 			width: 40%;
 			display: block;
   			margin-left: auto;
   			margin-right: auto;
 		}
+
+		#photos .center{
+			height: 75%;
+			width: 75%;
+			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+		}
+		/*#photo1, #photo2, #photo3{
+			margin-right: auto;
+			margin-left: auto;
+		}*/
 		form{
 	margin-top: 50px;
 	transition: all 4s ease-in-out;
@@ -108,7 +120,7 @@
 	color: black;
 	font-size: 18px;
 	margin-bottom: 16px;
-		margin-right: auto;
+	margin-right: auto;
 	margin-left: auto;
 }
 
@@ -144,7 +156,8 @@ form .submit:hover{
   <a href="#plot"><em style="font-family: Acme;">The story</em></a>
   <a href="#video"><em style="font-family: Acme;">The game</em></a>
   <a href="#features"><em style="font-family: Acme;">The features</em></a>
-  <a href="#team"><em style="font-family: Acme;">The team</em></a>
+  <a href="#team"><em style="font-family: Acme;">About us</em></a>
+  <a href="#contacts"><em style="font-family: Acme;">Contacts</em></a>
   <a href="https://drive.google.com/file/d/1hOQ3msoNphn2lDLy_kMKXwz2OW6etIMZ/view"><em style="font-family: Acme;">Get the game demo!</em></a>
   <a href="blog.html"><em style="font-family: Acme;">Go to Carlo's blog</em></a>
 </div>
@@ -177,13 +190,25 @@ form .submit:hover{
 		<div class="col-sm-5" id="video-description" style="height: 100%;">
 			<h1 style=" text-align: center;font-family: Acme; font-size: 3.75em; padding-right: 15px;">GAME DYNAMICS<br>~~~~~~~~~~</h1>
 
-			<h2 style="font-size: 1.5em; font-family: Verdana; text-align: center;"><i>”EROTION, DESERTIFICATION AND POLLUTION HAVE BECOME OUR LOT. IT IS A WEIRD FORM OF SUICIDE, FOR WE ARE BLEEDING OUR PLANET TO DEATH.”</i></h2> <br>
+			<h2 style="font-size: 1.5em; font-family: Verdana; text-align: center;"><i>”EROSION, DESERTIFICATION AND POLLUTION HAVE BECOME OUR LOT. IT IS A WEIRD FORM OF SUICIDE, FOR WE ARE BLEEDING OUR OWN PLANET TO DEATH.”</i></h2> <br>
 			
 			<p style=" text-align: center; padding-bottom: 6px; padding-right: 15px; font-family: Verdana; font-size: 1.5em;">
-				<i><b>Desertification</b></i> is a third-person exploration game centered in a world destroyed by the rapid growth of the desert. You, the player, is the last survivor of an almost extinct population, with the mission of recreating a living environment. Along the way, players can uncover artifacts and stories from the extinct population, and perhaps even bring them back to life.
+				<i><b>Desertification</b></i> is a third-person exploration game centered in a world destroyed by the rapid growth of the desert. You, the player, are the last survivor of an almost extinct population, with the mission of recreating a living environment. Along the way, players can uncover artifacts and stories from the extinct population, and perhaps even bring them back to life.
 				
 		    </p>
 			
+		</div>
+	</div>
+	<div class="row" id="photos" style="padding-bottom: 30px; background-color: orange;">
+	<h2 style="text-align: center; font-family: Acme; font-size: 2.9em;">PHOTO GALLERY<br>~~~~~~~~~~</h2>
+		<div class="col-sm-4" style="margin-left: auto; margin-right: auto;">
+			<img class="center" src="d1.png" width="400" height="315">
+		</div>
+		<div class="col-sm-4" style="margin-left: auto; margin-right: auto;">
+			<img class="center" src="d2.png" width="400" height="315">
+		</div>
+		<div class="col-sm-4" style="margin-left: auto; margin-right: auto;">
+			<img class="center" src="d3.png" width="400" height="315">
 		</div>
 	</div>
 	<div class="row">
@@ -195,15 +220,6 @@ form .submit:hover{
 				For more specific informations, we suggest to go through the Game Design Document, available at <a href="https://docs.google.com/document/d/1RLu0UsceaPPgmQjf2z_8BuwYOr5zpQZtVJRw1ZHnvSE/edit?usp=sharing">this link</a>.			
 			</p>
 			
-		</div>
-		<div class="col-sm-4" id="features">
-			<img src="">
-		</div>
-		<div class="col-sm-4" id="features">
-			<img src="">
-		</div>
-		<div class="col-sm-4" id="features">
-			<img src="">
 		</div>
 	</div>
 	<div class="row">
@@ -230,7 +246,7 @@ form .submit:hover{
 			</div>
 		</div>
 	</div>
-	<div class="row" style="background-color: lightyellow;">
+	<div class="row" style="background-color: lightyellow;" id="contacts">
 		<div class="col-sm-3">
 			
 		</div>
