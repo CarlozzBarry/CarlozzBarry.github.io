@@ -19,7 +19,11 @@
 		-->
 		<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 		
-
+	<script src="https://smtpjs.com/v3/smtp.js">
+	</script>
+	<script type="text/javascript">
+		
+	</script>
 	<style type="text/css">
 			.topnav {
 		  background-color: orange;
@@ -55,6 +59,19 @@
 
 		#video-description{
 			
+		}
+
+		button { border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  width: 100%;
+		  font-size: 16px;
+		  margin-left: auto;
+		  margin-right: auto;
+		  cursor: pointer;
 		}
 
 		#video{
@@ -107,48 +124,9 @@
 			margin-right: auto;
 			margin-left: auto;
 		}*/
-		form{
-	margin-top: 50px;
-	transition: all 4s ease-in-out;
-}
 
-.form-control{
-	width: 600px;
-	border: none;
-	outline: none;
-	border-bottom: 1px solid gray;
-	color: black;
-	font-size: 18px;
-	margin-bottom: 16px;
-	margin-right: auto;
-	margin-left: auto;
-}
 
-input{
-	height: 45px;
-}
-
-form .submit{
-	margin-right: auto;
-	margin-left: auto;
-	object-position: center;
-	background-color: #ff5722;
-	border-color: transparent;
-	color: #fff;
-	font-size: 18px;
-	letter-spacing: 2px;
-	height: 50px;
-	margin-top: 20px;
-}
-
-form .submit:hover{
-	background-color: #f44336;
-	cursor: pointer;
-}
 	</style>
-	<script type="text/javascript">
-		
-	</script>
 </head>
 
 <body>
@@ -257,20 +235,16 @@ form .submit:hover{
 			
 		</div>
 		<div class="col-sm-6">
-			<h1 style="padding: 1em; text-align: center; font-family: Acme;">CONTACT US!<br>~~~~~~~~~~</h1>
-			<form action="action.php" style="margin-left: auto; margin-right: auto; text-align: center;" id="contact-form">
-			  <input name="name" type="text" class="form-control" placeholder="Your name" required ><br>
-			  <input name="email" type="text" class="form-control" placeholder="Email" required ><br>
-			  <textarea name="message" class="form-control" placeholder="Leave a message here" rows="4"></textarea>
-			 <br>
-			  <input type="submit" class="form-control submit" value="Send us your message!" style="text-align: center; font-family: Acme; width: 30%">
-			</form> 
-				<br>
-		
+			<h1 style="padding: 1em; text-align: center; font-family: Acme;"><a href="mailto: cbarone@kth.se">CONTACT US!</a><br>~~~~~~~~~~</h1>
 		</div>
 		<div class="col-sm-3">
 			
 		</div>		
+	</div>
+	<div class="row">
+		<br><br>
+	</div>
+		<div class="col-sm-5"></div>
 	</div>
 	<div class="row">
 		<div class="col-sm-12" id="footer">
