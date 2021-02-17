@@ -32,5 +32,29 @@
 			  display: block;
 	    	  margin-left: auto;
 			  margin-right: auto;
-			  width: 50%;
+			   size: contain; border-left: 5px black solid; border-right: 5px black solid; border-top: 5px black solid; border-bottom: 5px black solid; margin: auto;"
 		}
+   .topnav {
+  background-color: blue;
+  overflow: hidden;
+  color: orange;
+
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  font-size: 20px;
+  font-family: Acme;
+  float: left;
+  color: orange;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: orange;
+  color: blue;
+}
