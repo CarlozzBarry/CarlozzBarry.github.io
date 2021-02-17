@@ -1,0 +1,60 @@
+.row{
+        padding: 15px;
+      }
+      img{       
+        height: auto;
+      }
+
+      @font-face{
+         font-family: JazzTextExtended;
+        src: url(jazztext.ttf)
+
+          }     
+      .card-title{
+        font-family: Acme;
+        font-weight: bold;
+        /* 1 pixel black shadow to left, top, right and bottom */
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      }
+      .portfolios-title{
+        font-family: Acme;
+        font-weight: bold;
+        text-align: center;
+        font-size: 5em;
+         /* 1 pixel black shadow to left, top, right and bottom */
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: orange;
+      }
+      .topnav {
+  background-color: blue;
+  overflow: hidden;
+  color: orange;
+
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  font-size: 20px;
+  font-family: Acme;
+  float: left;
+  color: orange;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: orange;
+  color: blue;
+}
+.card-content, .card-action{
+  font-family: Acme;
+  font-size: 20px;
+}
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
