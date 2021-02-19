@@ -15,7 +15,30 @@ body {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
 }
+.topnav {
+       background-color: blue;
+       overflow: hidden;
+       color: orange;
 
+    }
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+      font-size: 20px;
+      font-family: Acme;
+      float: left;
+      color: orange;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      
+    }
+
+    /* Change the color of links on hover */
+    .topnav a:hover {
+      background-color: orange;
+      color: blue;
+    }
 #container {
   display: flex;
   flex-flow: row;
