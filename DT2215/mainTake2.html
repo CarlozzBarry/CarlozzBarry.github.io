@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	 <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'> 
 	<script type="text/javascript" src="https://carlozzbarry.github.io/DT2215/script.js"></script>
+	<script src="WebAudioXML.js" data-source="audio.xml"></script>
 		 <!-- Compiled and minified CSS
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
      <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -128,19 +129,19 @@
 				</tr>
 		<tr>		
 		<td class="onlyOne">	
-					<svg width="100" heigth="150">
-						<rect width="100%" height="100" style="fill: rgb(255,0,0); stroke-width:3; stroke:rgb(0,0,0);" /> 
+					<svg width="100" heigth="150" id="hoverboardRect">
+						<rect width="200%" height="100" style="fill: rgb(255,0,0); stroke-width:3; stroke:rgb(0,0,0);" /> 
 					</svg>			
 				</td>
 				<td class="onlyOne">
-					<svg width="100" heigth="150">
+					<svg width="100" heigth="150" id="fluctuatingRect">
 						
-						<rect width="100%" height="100" style="fill: rgb(0,0,255); stroke-width:3; stroke:rgb(0,0,0)" />
+						<rect width="200%" height="100" style="fill: rgb(0,0,255); stroke-width:3; stroke:rgb(0,0,0)" />
 					</svg>
 				</td> 
 				<td class="onlyOne">
-					<svg width="100" heigth="150">
-						<rect width="100%" height="100" style="fill: rgb(0,255,0); stroke-width:3; stroke:rgb(0,0,0)" />
+					<svg width="100" heigth="150" id="wheelchairRect">
+						<rect width="200%" height="100" style="fill: rgb(0,255,0); stroke-width:3; stroke:rgb(0,0,0)" />
 					</svg>
 				</td>
 				</tr>
@@ -149,17 +150,17 @@
 					<table width="34%" class="littleCircles">
 						<tr>
 						<td class="internal">
-							<svg width="100" heigth="100" position="center">
+							<svg width="100" heigth="100" position="center" id="hoverboardCircle1">
 								<circle cx="50" cy="50" r="50" style="stroke:black; fill:red; display: solid; position: center;">
 							</svg>
 						</td>
 						<td class="internal">
-							<svg width="100" heigth="100" position="center">
+							<svg width="100" heigth="100" position="center" id="hoverboardCircle2">
 								<circle cx="50" cy="50" r="50" style="stroke:black; fill:red; display: solid; position: center;">
 							</svg>
 						</td>
 						<td class="internal">
-							<svg width="100" heigth="100" position="center">
+							<svg width="100" heigth="100" position="center" id="hoverboardCircle3">
 								<circle cx="50" cy="50" r="50" style="stroke:black; fill:red; display: solid; position: center;">
 							</svg>
 						</td>
@@ -172,17 +173,17 @@
 					<table width="33%" class="littleCircles">
 						<tr>
 						<td class="internal">
-							<svg width="100" heigth="100" position="center">
+							<svg width="100" heigth="100" position="center" id="fluctuatingCircle1">
 								<circle cx="50" cy="50" r="50" style="stroke:black; fill:blue; display: solid;  position: center;">
 							</svg>
 						</td>
 						<td class="internal">
-							<svg width="100" heigth="100" position="center">
+							<svg width="100" heigth="100" position="center" id="fluctuatingCircle2">
 								<circle cx="50" cy="50" r="50" style="stroke:black; fill:blue; display: solid;  position: center;">
 							</svg>
 						</td>
 						<td class="internal">
-							<svg width="100" heigth="100" position="center">
+							<svg width="100" heigth="100" position="center" id="fluctuatingCircle3">
 								<circle cx="50" cy="50" r="50" style="stroke:black; fill:blue; display: solid;  position: center;">
 							</svg>
 						</td>
@@ -194,17 +195,17 @@
 						<table width="33%" class="littleCircles">
 							<tr>
 							<td class="internal">
-								<svg width="100" heigth="100">
+								<svg width="100" heigth="100" id="wheelchairCircle1">
 									<circle cx="50" cy="50" r="50" style="stroke:black; fill:green; display: solid; position: center;">
 								</svg>
 							</td>
 							<td class="internal">
-								<svg width="100" heigth="100">
+								<svg width="100" heigth="100" id="wheelchairCircle1">
 									<circle cx="50" cy="50" r="50" style="stroke:black; fill:green; display: solid;  position: center;">
 								</svg>
 							</td>
 							<td class="internal">
-								<svg width="100" heigth="100" >
+								<svg width="100" heigth="100" id="wheelchairCircle1">
 									<circle cx="50" cy="50" r="50" style="stroke:black; fill:green; display: solid;  position: center;">
 								</svg>
 							</td>
