@@ -1,34 +1,46 @@
-let touchArea = document.getElementById("touchArea");
-let compareButton = document.getElementById("compareButton");
-let playButton = document.getElementById("playButton");
+let hoverboardRect = document.getElementById("hoverboardRect");
+let fluctuatingRect = document.getElementById("fluctuatingRect");
+let wheelchairRect = document.getElementById("wheelchairRect");
 
-touchArea.onpointerup = touchAreaUp;
-touchArea.onpointerdown = touchAreaDown;
+let hoverboardCircle1 = document.getElementById("hoverboardCircle1");
+let fluctuatingCircle1 = document.getElementById("fluctuatingCircle1");
+let wheelchairCircle1 = document.getElementById("wheelchairCircle1");
+
+let hoverboardCircle2 = document.getElementById("hoverboardCircle2");
+let fluctuatingCircle2 = document.getElementById("fluctuatingCircle2");
+let wheelchairCircle2 = document.getElementById("wheelchairCircle2");
+
+let hoverboardCircle3 = document.getElementById("hoverboardCircle3");
+let fluctuatingCircle3 = document.getElementById("fluctuatingCircle3");
+let wheelchairCircle3 = document.getElementById("wheelchairCircle3");
+
+hoverboardRect.onpointerup = hoverboardRectUp;
+hoverboardRect.onpointerdown = hoverboardRectDown;
 playButton.onclick = playButtonClick;
 compareButton.onclick = compareButtonClick;
 
-let touchAreaStatus = false;
-touchArea.style.pointerEvents = "none";
-touchArea.style.opacity = "0.5";
+let hoverboardRectStatus = false;
+hoverboardRect.style.pointerEvents = "none";
+hoverboardRect.style.opacity = "0.5";
 
-function touchAreaToggle() {
-  if (touchAreaStatus == false) {
-    touchArea.style.pointerEvents = "auto";
+function hoverboardRectToggle() {
+  if (hoverboardRectStatus == false) {
+    hoverboardRect.style.pointerEvents = "auto";
     touchArea.style.opacity = "1";
-    touchAreaStatus = true;
+    hoverboardRectStatus = true;
   }
 }
 
-function touchAreaUp(event) {
+function hoverboardRectUp(event) {
   compareButton.disabled = false;
-  touchArea.innerHTML = "Sound saved";
+  hoverboardRect.innerHTML = "Sound saved";
 
   event.preventDefault();
 }
 
-function touchAreaDown(event) {
-  touchArea.innerHTML = "";
-  touchArea.style.cssText = "border-color:transparent;";
+function hoverboardRectDown(event) {
+  hoverboardRect.innerHTML = "";
+  hoverboardRect.style.cssText = "border-color:transparent;";
 
   event.preventDefault();
 }
