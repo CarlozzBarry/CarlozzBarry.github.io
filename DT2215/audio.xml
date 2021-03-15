@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Audio version="1.0" timeUnit="ms" interactionArea="#touchArea" gain="-10dB">
+<Audio version="1.0" timeUnit="ms" interactionArea="#hoverboardRect" gain="-10dB">
 	
 <mixer>
 	<Chain portamento="50">
 
-		<OscillatorNode type="sine">
+		<SourceNode src="FicSon_Sounds/250384__lostphosphene__skateboard.wav">
 			<frequency follow="relX" map="100,0,100,1000"></frequency>
-		</OscillatorNode>
+		</SourceNode>
 		 
 		
 		<GainNode>
@@ -18,53 +18,5 @@
 
 	</Chain>
 
-	<Chain portamento="50">
-		<OscillatorNode type="sawtooth">
-		<frequency follow="relY" map="100,0,100,1000"></frequency>
-	</OscillatorNode>
-	<GainNode>
-			<gain>
-				<Envelope adsr="100,100,50,20" trig="pointer" max="1"></Envelope>
-			</gain>
-		</GainNode>
-		
-	</Chain>
-
-
-	<Chain portamento="50">
-
-		<OscillatorNode type="sine">
-			<frequency follow="relY" map="100,0,100,1000"></frequency>
-		</OscillatorNode>
-		 
-		<BiquadFilterNode type="lowpass">
-				<frequency follow="relY" map="100,0,100,1000"></frequency>
-		</BiquadFilterNode>
-		<GainNode>
-			<gain>
-				<Envelope adsr="100,100,50,20" trig="pointer" max="1"></Envelope>
-			</gain>
-		</GainNode>
-		
-
-	</Chain>
-	
-
-	<Chain>
-
-		<OscillatorNode type="square">
-			<frequency follow="relY" map="100,0,100,1000"></frequency>
-		</OscillatorNode>
-		 	<GainNode>
-			<gain>
-				<Envelope adsr="100,100,50,20" trig="pointer" max="1"></Envelope>
-			</gain>
-		</GainNode>
-		<BiquadFilterNode type="lowpass">
-			<frequency follow="relY" map="0,100,0,5000, 3"></frequency>
-		</BiquadFilterNode>
-	</Chain>
-
-	
 </mixer>
 </Audio>
