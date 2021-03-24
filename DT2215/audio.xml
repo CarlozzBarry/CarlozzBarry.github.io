@@ -4,7 +4,7 @@
 <mixer>
 	<Chain portamento="50">
 
-		<SourceNode src="FicSon_Sounds/250384__lostphosphene__skateboard.wav">
+		<SourceNode src="FicSon_Sounds/C1/250384__lostphosphene__skateboard.wav">
 			<frequency follow="relX" map="100,0,100,1000"></frequency>
 		</SourceNode>
 		 
@@ -17,6 +17,45 @@
 		
 
 	</Chain>
+</mixer>
+</Audio>
+<Audio version="1.0" timeUnit="ms" interactionArea="#fluctuatingRect" gain="-10dB">
+	
+<mixer>
+	<Chain portamento="50">
 
+		<SourceNode src="FicSon_Sounds/C2/267101__omega9__weak-electric-weak-electric.wav">
+			<frequency follow="relX" map="100,0,100,1000"></frequency>
+		</SourceNode>
+		 
+		
+		<GainNode>
+			<gain>
+				<Envelope adsr="100,100,50,20" trig="pointer" max="1"></Envelope>
+			</gain>
+		</GainNode>
+		
+
+	</Chain>
+</mixer>
+</Audio>
+<Audio version="1.0" timeUnit="ms" interactionArea="#wheelchairRect" gain="-10dB">
+	
+<mixer>
+	<Chain portamento="50">
+
+		<SourceNode src="FicSon_Sounds/C3/C3.wav">
+			<frequency follow="relX" map="100,0,100,1000"></frequency>
+		</SourceNode>
+		 
+		
+		<GainNode>
+			<gain>
+				<Envelope adsr="100,100,50,20" trig="pointer" max="1"></Envelope>
+			</gain>
+		</GainNode>
+		
+
+	</Chain>
 </mixer>
 </Audio>
