@@ -4,6 +4,7 @@ var hoverboardRect = document.querySelector("#hoverboardRect");
 var fluctuatingRect = document.querySelector("#fluctuatingRect");
 var wheelchairRect = document.querySelector("#wheelchairRect");
 var video = document.querySelector("#video");
+var sound = document.querySelector(".sound");
 
 var btn1 = document.querySelector("#btn1").addEventListener("click", e => {
 
@@ -13,7 +14,7 @@ var btn1 = document.querySelector("#btn1").addEventListener("click", e => {
 
   // start Audio
 
-  webAudioXML.start(".sound");
+  sound.start();
 
 });
 
