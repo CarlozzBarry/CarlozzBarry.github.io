@@ -1,4 +1,23 @@
-let touchArea = document.getElementById("touchArea");
+
+
+var hoverboardRect = document.querySelector("#hoverboardRect");
+var fluctuatingRect = document.querySelector("#fluctuatingRect");
+var wheelchairRect = document.querySelector("#wheelchairRect");
+var video = document.querySelector("#video");
+
+var btn1 = document.querySelector("#btn1").addEventListener("click", e => {
+
+  // star video
+  video.start();
+
+
+  // start Audio
+
+  webAudioXML.start(".sound");
+
+});
+
+/*let touchArea = document.getElementById("touchArea");
 let compareButton = document.getElementById("compareButton");
 let playButton = document.getElementById("playButton");
 
@@ -49,4 +68,4 @@ function compareButtonClick(event) {
     : ((touchArea.style.cssText = "border-color:red;"),
       (touchArea.innerHTML = "Not at all! <br/> Try again, you'll be luckier!"));
   event.preventDefault();
-}
+}*/
