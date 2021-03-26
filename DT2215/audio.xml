@@ -4,7 +4,7 @@
 <mixer>
 	<Chain portamento="50">
 
-		 <AudioBufferSourceNode class="sound" id="sound1" loop="true" src="carlozzbarry.com/DT2215/FicSon_Sounds/C1/250384__lostphosphene__skateboard.wav" loopStart="0" loopEnd="5050">
+		 <AudioBufferSourceNode class="sound" id="sound1" loop="true" src="carlozzbarry.com/DT2215/C1/Skateboard_sound.wav" loopStart="0" loopEnd="5050">
       <playbackRate value="1" follow="relX" map="0, 100, -2, 2"></playbackRate>
     </AudioBufferSourceNode>
 		
