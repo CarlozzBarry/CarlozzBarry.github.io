@@ -514,7 +514,8 @@ class AudioObject{
 	  	if(transitionTime){
 		  	param.setTargetAtTime(value, startTime, transitionTime);
 	  	} else {
-	  		debugger
+	  		console.log('Value' + value);
+			console.log('StartTime' + startTime);
 		  	param.setValueAtTime(value, startTime);
 	  	}
 
