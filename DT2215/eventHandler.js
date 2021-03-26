@@ -7,9 +7,8 @@ var button = document.querySelector("#button")
 
 function play(){
   // star video
-  let video = document.querySelector("#video");
   let sound = document.querySelector(".sound");
-  video.start();
+  
   // start Audio
   sound.start();
 
