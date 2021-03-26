@@ -5,21 +5,16 @@ var fluctuatingRect = document.querySelector("#fluctuatingRect");
 var wheelchairRect = document.querySelector("#wheelchairRect");
 var video = document.querySelector("#video");
 var sound = document.querySelector(".sound");
-
 var button = document.querySelector("#button")
 
-button.addEventListener("click", e => {
-
+function play{
   // star video
   video.start();
-
-
   // start Audio
-
   sound.start();
 
-});
-
+;
+}
 /*let touchArea = document.getElementById("touchArea");
 let compareButton = document.getElementById("compareButton");
 let playButton = document.getElementById("playButton");
