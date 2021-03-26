@@ -6,9 +6,9 @@ var wheelchairRect = document.querySelector("#wheelchairRect");
 var video = document.querySelector("#video");
 var sound = document.querySelector(".sound");
 
-var btn1 = document.querySelector("#btn1")
+var button = document.querySelector("#button")
 
-btn1.addEventListener("click", e => {
+button.addEventListener("click", e => {
 
   // star video
   video.start();
