@@ -514,6 +514,7 @@ class AudioObject{
 	  	if(transitionTime){
 		  	param.setTargetAtTime(value, startTime, transitionTime);
 	  	} else {
+	  		debugger
 		  	param.setValueAtTime(value, startTime);
 	  	}
 
