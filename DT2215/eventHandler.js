@@ -3,12 +3,12 @@
 var hoverboardRect = document.querySelector("#hoverboardRect");
 var fluctuatingRect = document.querySelector("#fluctuatingRect");
 var wheelchairRect = document.querySelector("#wheelchairRect");
-var video = document.querySelector("#video");
-var sound = document.querySelector(".sound");
 var button = document.querySelector("#button")
 
 function play(){
   // star video
+  let video = document.querySelector("#video");
+  let sound = document.querySelector(".sound");
   video.start();
   // start Audio
   sound.start();
