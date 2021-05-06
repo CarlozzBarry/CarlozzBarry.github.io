@@ -7,16 +7,25 @@
 
          
       .card-title{
-        font-family: Oswald;
+        font-family: Trebuchet MS;
         font-weight: bold;
         /* 1 pixel black shadow to left, top, right and bottom */
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
       }
       .portfolios-title{
-        font-family: Oswald;
+        font-family: Trebuchet MS;
         font-weight: bold;
         text-align: center;
-        font-size: 5em;
+        font-size: 200%;
+         /* 1 pixel black shadow to left, top, right and bottom */
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: orange;
+      }
+      .portfolios-caption{
+          font-family: Trebuchet MS;
+        font-weight: bold;
+        text-align: center;
+        font-size: 75%;
          /* 1 pixel black shadow to left, top, right and bottom */
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     color: orange;
@@ -28,7 +37,7 @@
 
 }
 .aboutme-title{
-        font-family: Oswald;
+        font-family: Trebuchet MS;
         font-weight: bold;
         text-align: center;
         padding: 3%;
@@ -40,7 +49,7 @@
 /* Style the links inside the navigation bar */
 .topnav a {
   font-size: 20px;
-  font-family: Oswald;
+  font-family: Trebuchet MS;
   float: left;
   color: orange;
   text-align: center;
@@ -55,7 +64,7 @@
   color: blue;
 }
 .card-content, .card-action{
-  font-family: Oswald;
+  font-family: Trebuchet MS;
   font-size: 20px;
 }
 /* Add a color to the active/current link */
