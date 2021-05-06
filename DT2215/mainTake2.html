@@ -3,7 +3,7 @@
 <head>
 	<title>User Interface</title>
 	<meta charset="utf-8">
-	 <link href='https://fonts.googleapis.com/css?family=Trebuchet MS' rel='stylesheet'> 
+	 <link href='https://fonts.googleapis.com/css?family='Oswald script=latin rev=2', sans-serif, !important' rel='stylesheet'> 
 	<script src="WebAudioXML.js" data-source="audio.xml"></script>
 		 <!-- Compiled and minified CSS
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
@@ -18,33 +18,7 @@
 <script src="eventData.js"></script>
     <script src="comparison.js"></script>-->
     <script src="eventHandler.js"></script>
-    
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
 	<link rel="icon" href="../faccia_di_tola.ico">
 <style type="text/css">
 	
@@ -63,6 +37,13 @@ $(document).ready(function(){
 			padding-bottom: 20px; 
 		}
 
+		 @font-face{   
+ font-family: "Oswald script=latin rev=2";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.482;
+    src: url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap")
+}
 
 		.container{
 			border: 5px solid black;
@@ -111,7 +92,7 @@ $(document).ready(function(){
 		/* Style the links inside the navigation bar */
 		.topnav a {
 		  font-size: 20px;
-		  font-family: Trebuchet MS;
+		  font-family: 'Oswald script=latin rev=2', sans-serif, !important;
 		  float: left;
 		  color: orange;
 		  text-align: center;
@@ -141,7 +122,7 @@ $(document).ready(function(){
 </head>
 <body>
 <div class="topnav">
-  <a href="https://carlozzbarry.github.io/index.html" style="font-family: Trebuchet MS;">Back to the main page</a>
+  <a href="https://carlozzbarry.github.io/index.html" style="font-family: 'Oswald script=latin rev=2', sans-serif, !important;">Back to the main page</a>
 </div>
 <div class="videoContainer">
 	<video id="video" controls loop width="100%">
@@ -154,9 +135,9 @@ $(document).ready(function(){
 	
 		<tr>
 			
-					<th><h1 style="font-family: Trebuchet MS; margin-right: auto; margin-left: auto; font-family: Verdana;">Flying hoverboard</h1></th>
-					<th><h1 style="font-family: Trebuchet MS; margin-right: auto; margin-left: auto; font-family: Verdana;">Fluctuating transport</h1></th>
-					<th><h1 style="font-family: Trebuchet MS; margin-right: auto; margin-left: auto; font-family: Verdana;">Gyroscope wheelchair</h1></th>
+					<th><h1 style="font-family: 'Oswald script=latin rev=2', sans-serif, !important; margin-right: auto; margin-left: auto; font-family: Verdana;">Flying hoverboard</h1></th>
+					<th><h1 style="font-family: 'Oswald script=latin rev=2', sans-serif, !important; margin-right: auto; margin-left: auto; font-family: Verdana;">Fluctuating transport</h1></th>
+					<th><h1 style="font-family: 'Oswald script=latin rev=2', sans-serif, !important; margin-right: auto; margin-left: auto; font-family: Verdana;">Gyroscope wheelchair</h1></th>
 				</tr>
 		<tr>		
 		<td class="onlyOne">	

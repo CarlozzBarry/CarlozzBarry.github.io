@@ -1,8 +1,10 @@
 
-@font-face{
-	font-family: JazzTextExtended;
-	src: url(jazztext.ttf)
-
+ @font-face{   
+ font-family: "Oswald script=latin rev=2";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.482;
+    src: url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap")
 }
 
 

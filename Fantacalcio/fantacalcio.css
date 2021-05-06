@@ -35,7 +35,7 @@
 }
 
 .date{
-  font-family: Trebuchet MS;
+  font-family: 'Oswald script=latin rev=2', sans-serif, !important;
   text-align: center; 
   font-size: 1.5em; 
   font-weight: bold; 
@@ -43,9 +43,9 @@
 }
 
 b{
-  font-family: Trebuchet MS;
+  font-family: 'Oswald script=latin rev=2', sans-serif, !important;
 }
 
 h1{
-   font-family: Trebuchet MS;
+   font-family: 'Oswald script=latin rev=2', sans-serif, !important;
 }
