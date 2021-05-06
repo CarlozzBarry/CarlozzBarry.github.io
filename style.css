@@ -5,19 +5,15 @@
         height: auto;
       }
 
-      @font-face{
-         font-family: JazzTextExtended;
-        src: url(jazztext.ttf)
-
-          }     
+         
       .card-title{
-        font-family: Acme;
+        font-family: Oswald;
         font-weight: bold;
         /* 1 pixel black shadow to left, top, right and bottom */
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
       }
       .portfolios-title{
-        font-family: Acme;
+        font-family: Oswald;
         font-weight: bold;
         text-align: center;
         font-size: 5em;
@@ -32,7 +28,7 @@
 
 }
 .aboutme-title{
-        font-family: Acme;
+        font-family: Oswald;
         font-weight: bold;
         text-align: center;
         padding: 3%;
@@ -44,7 +40,7 @@
 /* Style the links inside the navigation bar */
 .topnav a {
   font-size: 20px;
-  font-family: Acme;
+  font-family: Oswald;
   float: left;
   color: orange;
   text-align: center;
@@ -59,7 +55,7 @@
   color: blue;
 }
 .card-content, .card-action{
-  font-family: Acme;
+  font-family: Oswald;
   font-size: 20px;
 }
 /* Add a color to the active/current link */
