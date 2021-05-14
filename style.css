@@ -9,22 +9,14 @@ html {
         height: auto;
       }
 
-         @font-face{   
- font-family: "Oswald";
-    font-weight: 300;
-    font-style: normal;
-    line-height: 1.482;
-    src: url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap")
-}
- 
       .card-title{
-        font-family: 'Oswald', sans-serif, !important;
+        font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
         /* 1 pixel black shadow to left, top, right and bottom */
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
       }
       .portfolios-title{
-        font-family: 'Oswald', sans-serif, !important;
+        font-family: 'Úbuntu', sans-serif;
         font-weight: bold;
         text-align: center;
         
@@ -33,7 +25,7 @@ html {
     color: orange;
       }
       .portfolios-caption{
-          font-family: 'Oswald', sans-serif, !important;
+          font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
         text-align: center;
         font-size: 75%;
@@ -48,7 +40,7 @@ html {
 
 }
 .aboutme-title{
-        font-family: 'Oswald', sans-serif, !important;
+        font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
         text-align: center;
         padding: 3%;
@@ -60,7 +52,7 @@ html {
 /* Style the links inside the navigation bar */
 .topnav a {
   font-size: 20px;
-  font-family: 'Oswald', sans-serif, !important;
+  font-family: 'Ubuntu', sans-serif;
   float: left;
   color: orange;
   text-align: center;
@@ -75,7 +67,7 @@ html {
   color: blue;
 }
 .card-content, .card-action{
-  font-family: 'Oswald', sans-serif, !important;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
 }
 /* Add a color to the active/current link */
