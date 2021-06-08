@@ -8,6 +8,11 @@
       <playbackRate value="1" follow="relX" map="0, 100, -2, 2"></playbackRate>
     </AudioBufferSourceNode>
 		
+		<GainNode>
+			<gain>
+				<Envelope adsr="100,100,50,20" trig="pointer" max="1"></Envelope>
+			</gain>
+		</GainNode>
 
 	</Chain>
 </mixer>
