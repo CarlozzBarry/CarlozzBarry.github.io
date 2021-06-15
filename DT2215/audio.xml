@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Audio version="1.0" timeUnit="ms" interactionArea="#hoverboardRect" gain="-10dB">
 	
-<mixer>
-	<Chain portamento="50">
+	<Mixer>
+		<Chain portamento="50">
 
-	<AudioBufferSourceNode start="#start_sound_button" class="sound" id="sound1" loop="true" src="skateboard.wav" loopStart="0" loopEnd="5050">
-      <playbackRate value="1" follow="relX" map="0, 100, -2, 2"></playbackRate>
-    </AudioBufferSourceNode>
-		
-		<GainNode>
-			<gain>
-				<Envelope adsr="100,100,50,20" trig="pointer" max="1"></Envelope>
-			</gain>
-		</GainNode>
+			<AudioBufferSourceNode class="sound" id="sound1" loop="true" src="C1/C1.wav" loopStart="0" loopEnd="5050">
+		      <!--playbackRate value="1" follow="relX" map="0, 100, -2, 2"></playbackRate-->
+		    </AudioBufferSourceNode>
+			
+			<!--GainNode>
+				<gain>
+					<Envelope adsr="100,100,50,20" trig="pointer" max="1"></Envelope>
+				</gain>
+			</GainNode-->
 
-	</Chain>
-</mixer>
+		</Chain>
+	</Mixer>
 </Audio>
 <!--<Audio version="1.0" timeUnit="ms" interactionArea="#fluctuatingRect" gain="-10dB">
 	

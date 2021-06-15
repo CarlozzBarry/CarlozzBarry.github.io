@@ -3,7 +3,11 @@
 var hoverboardRect = document.querySelector("#hoverboardRect");
 var fluctuatingRect = document.querySelector("#fluctuatingRect");
 var wheelchairRect = document.querySelector("#wheelchairRect");
-var button = document.querySelector("#button")
+var button = document.querySelector("#button");
+
+document.querySelector("#start_sound_button").addEventListener("click", e => {
+  webAudioXML.start("AudioBufferSourceNode");
+});
 
 function play(){
   // star video
