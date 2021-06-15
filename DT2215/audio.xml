@@ -4,7 +4,7 @@
 <mixer>
 	<Chain portamento="50">
 
-	<AudioBufferSourceNode class="sound" id="sound1" loop="true" src="skateboard.wav" loopStart="0" loopEnd="5050">
+	<AudioBufferSourceNode start="#start_sound_button" class="sound" id="sound1" loop="true" src="skateboard.wav" loopStart="0" loopEnd="5050">
       <playbackRate value="1" follow="relX" map="0, 100, -2, 2"></playbackRate>
     </AudioBufferSourceNode>
 		
