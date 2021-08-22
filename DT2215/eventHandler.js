@@ -8,6 +8,9 @@ var button = document.querySelector("#button");
 document.querySelector("#start_sound_button").addEventListener("click", e => {
   webAudioXML.start("AudioBufferSourceNode");
 });
+document.querySelector("#stop_sound_button").addEventListener("click", e => {
+  webAudioXML.stop("AudioBufferSourceNode");
+});
 
 function play(){
   // star video
