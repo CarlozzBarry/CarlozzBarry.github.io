@@ -4,14 +4,61 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>FICSON CONTROLLER</title>
+	 <script src="eventHandler.js"></script>
+<style>
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#buttons{
+	text-align: center;
+}
+</style>
+
 </head>
 <body>
-<div>
-	<svg viewBox="0 0 20 20" >
-		<circle r="40%" cx="10" cy="10" style="stroke:black;fill:grey; display: solid; position: center;"></circle>
-		<text x="50%" y="50%" stroke="#51c5cf" stroke-width="2px" dy=".3em">Reset</text>
-	</svg>
-</div>
+	<div id="buttons">
+		<button class="button" id="resetBtn" style="vertical-align:middle"><span>Reset</span></button>
+		<button class="button" id="beginBtn" style="vertical-align:middle"><span>Begin</span></button>
+		<button class="button" id="saveBtn" style="vertical-align:middle"><span>Save</span></button>
+	</div>
+
 <div class="interface" style="margin-top:auto; margin-right: auto; margin-left: auto; margin-bottom: 10%; width: 75%">
 <table>
 	
