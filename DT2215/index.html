@@ -23,14 +23,7 @@
 <style type="text/css">
 	
 	
-		#circles{
-			object-position: center;
-			margin-right: auto;
-			margin-left: auto;
-			border: 2.5px black solid;
-			padding-top: 20px;
-			padding-bottom: 20px; 
-		}
+	
 html {
   scroll-behavior: smooth;
 }
@@ -53,31 +46,26 @@ html {
 		   background-color: blue;
 		   overflow: hidden;
 		   color: orange;
+}
 
-		}
-		.internal{
-			border: 1px black solid;
-			border-collapse: collapse;
-			padding: 10px;
-		}
-		.tableContainer{
-			border: 1px black solid;
-			border-collapse: collapse;
-			width: 100%;
-		}
-		.onlyOne{
-			border: 1px black solid;
-			border-collapse: collapse;
-			padding: 10px;
-		}
-		table .td{
-			padding-left: 5px;
-			padding-right: 5px; 
-		}
+.interface{
+	  background-color: #e0e0e0;
+}
+		   .col-sm-4 {
+
+  border-radius: 5px 5px 0 0;
+  display: flex; /* added */
+  align-items: center; /* added */
+}
+		
+	#footer{
+		background-color: grey;
+	}	
 		svg
 	{
 		margin-left: auto; 
 		margin-right: auto;
+
 	}
 		/* Style the links inside the navigation bar */
 		.topnav a {
@@ -92,7 +80,7 @@ html {
 		.videoContainer{
 			padding: 5%;
 		}
-		th{
+		th, td{
 			text-align: center;
 			border: 1px black solid;
 			border-collapse: collapse;
@@ -101,10 +89,7 @@ html {
 		.topnav a:hover {
 		  background-color: orange;
 		  color: blue;
-		}
-		.theBigOne{
-			padding-top: 20px;
-		}
+		
 </style>
 
 
@@ -120,102 +105,58 @@ html {
 		<source src="VideoFicson.mp4" type="video/mp4" onclick="play()">
 	</video>
 </div>
-<div class="interface" style="margin-top:auto; margin-right: auto; margin-left: auto; margin-bottom: auto; width: 75%">
+<div class="interface" style="margin-top:auto; margin-right: auto; margin-left: auto; margin-bottom: 10%; width: 75%">
+<table>
 	
-<table class="theBigOne">
-	<!--First row of the table, containining the headers-->	
 		<tr>
 			
-					<th><h1 style="font-family: 'Oswald script=latin rev=2', sans-serif, !important; margin-right: auto; margin-left: auto; font-family: Verdana;">Flying hoverboard</h1></th>
-					<th><h1 style="font-family: 'Oswald script=latin rev=2', sans-serif, !important; margin-right: auto; margin-left: auto; font-family: Verdana;">Fluctuating hanger</h1></th>
-					<th><h1 style="font-family: 'Oswald script=latin rev=2', sans-serif, !important; margin-right: auto; margin-left: auto; font-family: Verdana;">Gyroscope wheelchair</h1></th>
+					<th><h2 style="font-family: Verdana, sans-serif; margin-right: auto; margin-left: auto; padding: 5%; text-align: center;">Hoverboard</h2></th>
+					<th><h2 style="font-family: Verdana, sans-serif; margin-right: auto; margin-left: auto; padding: 5%; text-align: center;">FlngHanger</h2></th>
+					<th><h2 style="font-family: Verdana, sans-serif; margin-right: auto; margin-left: auto; padding: 5%; text-align: center;">Wheelchair</h2></th>
 				</tr>
-		<!--Second row of the table, containining the three big circles-->	
+	
+		<tr>
+					<td  colspan="3"><h3 style="font-family: Verdana, sans-serif; margin-right: auto; margin-left: auto; text-align: center;">Controller 1</h3></td>
+		</tr>
 		<tr>		
-		<td class="onlyOne">	
-					<svg width="100" heigth="100" class="circles" id="hoverboardCircle1">
-								<circle cx="50" cy="50" r="100" style="stroke:black; fill:red; display: solid; position: center;">
+		<td>	
+					<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" id="hoverboardCircle1">
+								<circle r="30%" cx="10" cy="10"  style=" fill:red; display: solid; position: center;"></circle>
 					</svg>		
 				</td>
-				<td class="onlyOne">
-					<svg width="100" heigth="100" class="circles" id="hangerCircle1">
-								<circle cx="50" cy="50" r="100" style="stroke:black; fill:blue; display: solid; position: center;">
+				<td>
+					<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" id="hangerCircle1">
+								<circle r="30%" cx="10" cy="10" style=" fill:blue; display: solid; position: center;"></circle>
 					</svg>
 				</td> 
-				<td class="onlyOne">
-					<svg width="100" heigth="150" class="circles" id="wheelchairCircle1">
-						<circle cx="50" cy="50" r="100" style="stroke:black; fill:green; display: solid; position: center;">
+				<td>
+					<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" id="wheelchairCircle1">
+						<circle r="30%" cx="10" cy="10"  style=" fill:green; display: solid; position: center;"></circle>
 					</svg>
 				</td>
 				</tr>
-		<!--Second row of the table, containing three other circles-->
-					<tr>		
-		<td class="onlyOne">	
-					<svg width="100" heigth="100" class="circles" id="hoverboardCircle2">
-								<circle cx="50" cy="50" r="100" style="stroke:black; fill:red; display: solid; position: center;">
+			<tr>
+					<td colspan="3"><h3 style="font-family: Verdana, sans-serif; margin-right: auto; margin-left: auto; text-align: center;">Controller 2</h3></td>
+		</tr>
+			<tr>		
+		<td>	
+					<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" id="hoverboardCircle2">
+								<circle r="30%" cx="10" cy="10"  style=" fill:red; display: solid; position: center;"></circle>
 					</svg>		
 				</td>
-				<td class="onlyOne">
-					<svg width="100" heigth="100" class="circles" id="hangerCircle2">
-								<circle cx="50" cy="50" r="100" style="stroke:black; fill:blue; display: solid; position: center;">
+				<td>
+					<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" id="hangerCircle2">
+								<circle r="30%" cx="10" cy="10" style=" fill:blue; display: solid; position: center;"></circle>
 					</svg>
 				</td> 
-				<td class="onlyOne">
-					<svg width="100" heigth="150" class="circles" id="wheelchairCircle2">
-						<circle cx="50" cy="50" r="100" style="stroke:black; fill:green; display: solid; position: center;">
+				<td>
+					<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" id="wheelchairCircle2">
+						<circle r="30%" cx="10" cy="10"  style=" fill:green; display: solid; position: center;"></circle>
 					</svg>
 				</td>
 				</tr>
-					</table>
-		
-				<!--
-				<td class="tableContainer">
-					
-					<table width="33%" class="littleCircles">
-						<tr>
-						<td class="internal">
-							<svg width="100" heigth="100" position="center" id="fluctuatingCircle1">
-								<circle cx="50" cy="50" r="50" style="stroke:black; fill:blue; display: solid;  position: center;">
-							</svg>
-						</td>
-						<td class="internal">
-							<svg width="100" heigth="100" position="center" id="fluctuatingCircle2">
-								<circle cx="50" cy="50" r="50" style="stroke:black; fill:blue; display: solid;  position: center;">
-							</svg>
-						</td>
-						<td class="internal">
-							<svg width="100" heigth="100" position="center" id="fluctuatingCircle3">
-								<circle cx="50" cy="50" r="50" style="stroke:black; fill:blue; display: solid;  position: center;">
-							</svg>
-						</td>
-					</tr>
-					</table>				
-						</td>
-	 
-					<td class="tableContainer">
-						<table width="33%" class="littleCircles">
-							<tr>
-							<td class="internal">
-								<svg width="100" heigth="100" id="wheelchairCircle1">
-									<circle cx="50" cy="50" r="50" style="stroke:black; fill:green; display: solid; position: center;">
-								</svg>
-							</td>
-							<td class="internal">
-								<svg width="100" heigth="100" id="wheelchairCircle1">
-									<circle cx="50" cy="50" r="50" style="stroke:black; fill:green; display: solid;  position: center;">
-								</svg>
-							</td>
-							<td class="internal">
-								<svg width="100" heigth="100" id="wheelchairCircle3">
-									<circle cx="50" cy="50" r="50" style="stroke:black; fill:green; display: solid;  position: center;">
-								</svg>
-							</td>
-						</tr>
-						</table>				
-	 				</td>
-	 			</tr>	
 		</table>
-	-->
+	</div>
 		 <script src="eventHandler.js"></script>
 </body>
 </html>
