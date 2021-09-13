@@ -15,11 +15,9 @@ document.querySelector("#stop_sound_button").addEventListener("click", e => {
 function play(){
   // star video
   let sound = document.querySelector("#sound1");
-  
   // start Audio
   sound.start();
 
-;
 }
 /*let touchArea = document.getElementById("touchArea");
 let compareButton = document.getElementById("compareButton");
