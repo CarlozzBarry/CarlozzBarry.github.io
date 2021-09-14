@@ -1,0 +1,5 @@
+/* Detta sätter alla grundmarginaler till 0 och ser till att sidan fyller hela webbläsaren */
+html, body {
+	margin: 0px;
+	padding: 0px;
+}
