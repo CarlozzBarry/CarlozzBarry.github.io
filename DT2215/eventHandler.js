@@ -1,9 +1,16 @@
 
 
-var hoverboardRect = document.querySelector("#hoverboardRect");
-var fluctuatingRect = document.querySelector("#fluctuatingRect");
-var wheelchairRect = document.querySelector("#wheelchairRect");
-var button = document.querySelector("#button");
+var hoverboardCircle1 = document.querySelector("#hoverboardCircle1");
+var hangerCircle1 = document.querySelector("#hangerCircle1");
+var wheelchairCircle1 = document.querySelector("#wheelchairCircle1");
+
+var hoverboardCircle2 = document.querySelector("#hoverboardCircle2");
+var hangerCircle2 = document.querySelector("#hangerCircle2");
+var wheelchairCircle2 = document.querySelector("#wheelchairCircle2");
+
+var beginBtn = document.querySelector("#beginBtn");
+var resetBtn = document.querySelector("#resetBtn");
+var saveBtn = document.querySelector("#saveBtn");
 
 document.querySelector("#start_sound_button").addEventListener("click", e => {
   webAudioXML.start("AudioBufferSourceNode");
@@ -17,8 +24,12 @@ function play(){
   let sound = document.querySelector("#sound1");
   // start Audio
   sound.start();
-
 }
+
+resetBtn.onclick(); //add code for resetting an initial state
+beginBtn.onclick(); //add code for beginning the recording
+saveBtn.onclick(); //add code for saving up what just done
+
 /*let touchArea = document.getElementById("touchArea");
 let compareButton = document.getElementById("compareButton");
 let playButton = document.getElementById("playButton");
