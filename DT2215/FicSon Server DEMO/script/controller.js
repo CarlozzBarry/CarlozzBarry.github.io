@@ -24,6 +24,8 @@ function serverToClient(msg){
 
 function init(){
 
+	console.log("init");
+
 	socket = io();
 	socket.addEventListener("error", e => console.log(e));
 

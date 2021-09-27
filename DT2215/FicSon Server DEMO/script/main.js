@@ -1,6 +1,7 @@
-window.addEventListener('load', () => {
-
 var socket;
+
+
+
 
 function play(){
   // star video
@@ -9,20 +10,25 @@ function play(){
   sound.start();
 }
 
-	
+
+/*
+window.addEventListener('load', () => {
+
+	console.log("init");
 	socket = io();
 	
 	socket.on('serverToClient', msg => {
 
 		switch(msg.name){
 			case "clickHb":
-		 	this.play();
-		 break;
+		 	play();
+		 	break;
 		}
 
 	});
 
 });
+*/
 
 document.querySelector("#start_sound_button").addEventListener("click", e => {
 	webAudioXML.start("AudioBufferSourceNode");
