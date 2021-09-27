@@ -7,10 +7,113 @@
 		<title>NodeJS - Socket.io</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js" integrity="sha512-WL6WGKMPBiM9PnHRYIn5YEtq0Z8XP4fkVb4qy7PP4vhmYQErJ/dySyXuFIMDf1eEYCXCrQrMJfkNwKc9gsjTjA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<link href="mystyle.css" rel="stylesheet" type="text/css" />
-	</head>
-	<body>
-		<h1>Controller</h1>
-		<button id="carlo">Carlo</button>
-		<script src="script/controller.js"></script>
-	</body>
+<style>
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#buttons{
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<div id="buttons">
+		<button class="button" id="resetBtn" style="vertical-align:middle"><span>Reset</span></button>
+		<button class="button" id="beginBtn" style="vertical-align:middle"><span>Begin</span></button>
+		<button class="button" id="saveBtn" style="vertical-align:middle"><span>Save</span></button>
+	</div>
+
+<div class="interface" style="margin-top:auto; margin-right: auto; margin-left: auto; margin-bottom: 10%; width: 75%">
+<table>
+	
+		<tr>
+			
+					<th><h2 style="font-family: Verdana, sans-serif; margin-right: auto; margin-left: auto; padding: 5%; text-align: center;">Hoverboard</h2></th>
+					<th><h2 style="font-family: Verdana, sans-serif; margin-right: auto; margin-left: auto; padding: 5%; text-align: center;">Hang-flyer</h2></th>
+					<th><h2 style="font-family: Verdana, sans-serif; margin-right: auto; margin-left: auto; padding: 5%; text-align: center;">Wheelchair</h2></th>
+				</tr>
+	
+		<tr>
+					<td  colspan="3"><h3 style="font-family: Verdana, sans-serif; margin-right: auto; margin-left: auto; text-align: center;">Controller 1</h3></td>
+		</tr>
+		<tr>		
+		<td>	
+					<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" id="hoverboardCircle1">
+								<circle r="30%" cx="10" cy="10"  style=" fill:red; display: solid; position: center;"></circle>
+					</svg>		
+				</td>
+				<td>
+					<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" id="hangerCircle1">
+								<circle r="30%" cx="10" cy="10" style=" fill:blue; display: solid; position: center;"></circle>
+					</svg>
+				</td> 
+				<td>
+					<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" id="wheelchairCircle1">
+						<circle r="30%" cx="10" cy="10"  style=" fill:green; display: solid; position: center;"></circle>
+					</svg>
+				</td>
+				</tr>
+			<tr>
+					<td colspan="3"><h3 style="font-family: Verdana, sans-serif; margin-right: auto; margin-left: auto; text-align: center;">Controller 2</h3></td>
+		</tr>
+			<tr>		
+		<td>	
+					<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" id="hoverboardCircle2">
+								<circle r="30%" cx="10" cy="10"  style=" fill:red; display: solid; position: center;"></circle>
+					</svg>		
+				</td>
+				<td>
+					<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" id="hangerCircle2">
+								<circle r="30%" cx="10" cy="10" style=" fill:blue; display: solid; position: center;"></circle>
+					</svg>
+				</td> 
+				<td>
+					<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" id="wheelchairCircle2">
+						<circle r="30%" cx="10" cy="10"  style=" fill:green; display: solid; position: center;"></circle>
+					</svg>
+				</td>
+				</tr>
+		</table>
+	</div>
+<head> 
+
+</body>
+
 </html>

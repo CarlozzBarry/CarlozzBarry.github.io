@@ -9,9 +9,9 @@ function init(){
 	socket.addEventListener("error", e => console.log(e));
 
 
-	document.querySelector("#carlo").addEventListener("click", event => {
+	document.querySelector("#wheelchairCircle1").addEventListener("click", event => {
 		clientToServer({
-			name: "carlo",
+			name: "clickedWheelchair",
 			value: Math.floor(Math.random() * 10)
 		});
 	});
