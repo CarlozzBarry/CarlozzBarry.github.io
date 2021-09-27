@@ -2,26 +2,8 @@
 window.addEventListener("load", init);
 
 
-
-function init(){
-
-	socket = io();
-	socket.addEventListener("error", e => console.log(e));
-
-
-	document.querySelector("#wheelchairCircle1").addEventListener("click", event => {
-		clientToServer({
-			name: "clickedWheelchair",
-			value: Math.floor(Math.random() * 10)
-		});
-	});
-
-}
-
-
-
 var socket;
-
+var hoverboardCircle = document.querySelector("#hoverboardCircle");
 
 function clientToServer(msg){
 	socket.emit("clientToServer", msg);
@@ -38,3 +20,20 @@ function serverToClient(msg){
 	}
 
 }
+
+
+function init(){
+
+	socket = io();
+	socket.addEventListener("error", e => console.log(e));
+
+
+	hoverboardCircle.addEventListener("click", event => {
+		clientToServer({
+			name: "clickHb"
+		});
+	});
+
+}
+
+
