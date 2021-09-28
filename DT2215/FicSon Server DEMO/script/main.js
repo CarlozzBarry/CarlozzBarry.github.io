@@ -11,7 +11,7 @@ function play(){
 }
 
 
-/*
+
 window.addEventListener('load', () => {
 
 	console.log("init");
@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
 	});
 
 });
-*/
+
 
 document.querySelector("#start_sound_button").addEventListener("click", e => {
 	webAudioXML.start("AudioBufferSourceNode");

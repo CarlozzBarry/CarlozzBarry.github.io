@@ -26,6 +26,7 @@ function init(){
 
 	console.log("init");
 
+
 	socket = io();
 	socket.addEventListener("error", e => console.log(e));
 
@@ -35,6 +36,10 @@ function init(){
 			name: "clickHb"
 		});
 	});
+	hoverboardCircle.addEventListener("mouseover", event => {
+		var xpos = event.offsetX;
+		var ypos = event.offsetY;
+	})
 
 }
 
