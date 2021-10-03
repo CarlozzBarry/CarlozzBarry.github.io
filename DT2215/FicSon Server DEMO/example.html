@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<style>
+div {border:1px solid red; border-radius: 50%; height:300px;}
+span {font-size:30px;}
+</style>
+<body>
+
+<h1>MouseEvent offsetX Property</h1>
+
+<p>The offsetX property returns the x-coordinate the mouse cursor, relative to the target element.</p>
+
+<p>In this example, the red DIV is the target element.</p>
+
+<p>Click inside the red DIV element:</p>
+
+<div onmousemove="myFunction(event)"></div>
+
+<p><span id="demo"></span></p>
+
+
+<script>
+function myFunction(event) {
+  
+  var x = event.clientX;
+  var y = event.clientY;
+  var coor = "Coordinates: (" + x + "," + y + ")";
+  document.getElementById("demo").innerHTML = coor;
+}
+</script>
+
+</body>
+</html>

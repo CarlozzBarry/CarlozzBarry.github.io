@@ -1,5 +1,6 @@
 var socket;
 var sound = document.querySelector("#sound1");
+let 
 
 document.querySelector("#start_sound_button").addEventListener("click", e => {
 	webAudioXML.start("AudioBufferSourceNode");
@@ -15,7 +16,6 @@ function play(){
 }
 
 
-
 window.addEventListener('load', () => {
 
 	console.log("init");
@@ -24,8 +24,8 @@ window.addEventListener('load', () => {
 	socket.on('serverToClient', msg => {
 
 		switch(msg.name){
-			case "clickHb":
-  		document.querySelector("#start_sound_button").click();
+			case "mouseHoveringHb":
+  		document.getElementById("hbx").innerHTML = msg.x;
 		 	break;
 		}
 

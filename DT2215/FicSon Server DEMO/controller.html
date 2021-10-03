@@ -10,6 +10,30 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js" integrity="sha512-WL6WGKMPBiM9PnHRYIn5YEtq0Z8XP4fkVb4qy7PP4vhmYQErJ/dySyXuFIMDf1eEYCXCrQrMJfkNwKc9gsjTjA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		-->
 		<script type="text/javascript" src="script/socket.io.js"></script>
+<script type="text/javascript">
+		function coordinatesHb(event){
+		var hbxpos = event.clientX - 86;
+		var hbypos = 289 - event.clientY;
+		var coor = "Coordinates = (" + hbxpos + "," + hbypos;
+		document.getElementById("hbx").innerHTML = hbxpos;
+		document.getElementById("hby").innerHTML = hbypos;
+		}
+		function coordinatesFh(event){
+		var fhxpos = event.clientX - 286;
+		var fhypos = 289 - event.clientY;
+		var coor = "Coordinates = (" + fhxpos + "," + fhypos;
+		document.getElementById("fhx").innerHTML = fhxpos;
+		document.getElementById("fhy").innerHTML = fhypos;
+		}
+		function coordinatesWc(event){
+		var wcxpos = event.clientX - 486;
+		var wcypos = 289 - event.clientY;
+		var coor = "Coordinates = (" + wcxpos + "," + wcypos;
+		document.getElementById("wcx").innerHTML = wcxpos;
+		document.getElementById("wcy").innerHTML = wcypos;
+		}
+
+	</script>
 		<link href="mystyle.css" rel="stylesheet" type="text/css" />
 		<style>
 		#hoverboardCircle, #wheelchairCircle, #hangerCircle{
@@ -40,6 +64,8 @@
 			cursor: pointer;
 			margin: 5px;
 		}
+
+		
 
 		.button span {
 			cursor: pointer;
@@ -80,16 +106,93 @@
 	<table>
 		<tr>
 			<td>
-				<div id="hoverboardCircle" style="background-color: red;"></div>
+				<div onmousemove="coordinatesHb(event)" id="hoverboardCircle" style="background-color: red;"></div>
 			</td>
 			<td>
-				<div id="hangerCircle" style="background-color: blue;"></div>
+				<div onmousemove="coordinatesFh(event)" id="hangerCircle" style="background-color: blue;"></div>
 			</td>
 			<td>
-				<div id="wheelchairCircle" style="background-color: green;"></div>
+				<div onmousemove="coordinatesWc(event)" id="wheelchairCircle" style="background-color: green;"></div>
 			</td>
 		</tr>
 	</table>
-	<script type="text/javascript" src="script/controller.js"></script>
+	<div>
+	<h2>Coordinates</h2>
+	<ul>
+		<li> Hoverboard
+		<ul>
+			<li><span id="hbx" class="coordinateNumber" style="font-size: 20px;"></span></li>
+			<li><span id="hby" class="coordinateNumber" style="font-size: 20px;"></span></li>
+		</ul>
+		</li>
+		<li> Flying Hanger
+		<ul>
+			<li><span id="fhx" class="coordinateNumber" style="font-size: 20px;"></span></li>
+			<li><span id="fhy" class="coordinateNumber" style="font-size: 20px;"></span></li>
+		</ul>
+		</li>
+		<li> Wheelchair
+		<ul>
+			<li><span id="wcx" class="coordinateNumber" style="font-size: 20px;"></span></li>
+			<li><span id="wcy" class="coordinateNumber" style="font-size: 20px;"></span></li>
+		</ul>
+		</li>			
+	</ul>
+	</div>
+	<!--script type="text/javascript" src="script/controller.js"></script-->
+	<script>
+		window.addEventListener("load", init);
+
+
+var socket;
+var hoverboardCircle = document.querySelector("#hoverboardCircle");
+function clientToServer(msg){
+	socket.emit("clientToServer", msg);
+}
+
+
+
+function serverToClient(msg){
+
+	switch(msg.command){
+
+		default:
+		break;
+	}
+
+}
+
+
+function init(){
+
+	console.log("init");
+
+
+	socket = io();
+	socket.addEventListener("error", e => console.log(e));
+
+
+	hoverboardCircle.addEventListener("mousemove", event => {
+		var hbxpos = event.clientX - 86;
+		var hbypos = 289 - event.clientY;
+		clientToServer({
+			name: "mouseHoveringHb"
+			x: hbxpos
+			y: hbypos
+		});
+	});
+	/*
+	hoverboardCircle.addEventListener("mouseover", event => {
+		var xpos = event.offsetX;
+		var ypos = event.offsetY;
+		clientToServer({
+			name: "overHoverboard";
+			xpos: xpos;
+			ypos: ypos;
+		})
+	})*/
+
+}
+</script>	
 </body>
 </html>
