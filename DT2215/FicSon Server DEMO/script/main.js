@@ -1,11 +1,15 @@
 var socket;
+var sound = document.querySelector("#sound1");
 
-
+document.querySelector("#start_sound_button").addEventListener("click", e => {
+	webAudioXML.start("AudioBufferSourceNode");
+});
+document.querySelector("#stop_sound_button").addEventListener("click", e => {
+	webAudioXML.stop("AudioBufferSourceNode");
+});
 
 
 function play(){
-  // star video
-  let sound = document.querySelector("#sound1");
   // start Audio
   sound.start();
 }
@@ -21,7 +25,7 @@ window.addEventListener('load', () => {
 
 		switch(msg.name){
 			case "clickHb":
-		 	play();
+  		document.querySelector("#start_sound_button").click();
 		 	break;
 		}
 
@@ -30,11 +34,5 @@ window.addEventListener('load', () => {
 });
 
 
-document.querySelector("#start_sound_button").addEventListener("click", e => {
-	webAudioXML.start("AudioBufferSourceNode");
-});
-document.querySelector("#stop_sound_button").addEventListener("click", e => {
-	webAudioXML.stop("AudioBufferSourceNode");
-});
 
 

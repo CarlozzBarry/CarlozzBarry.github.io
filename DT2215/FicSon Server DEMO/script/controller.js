@@ -36,10 +36,16 @@ function init(){
 			name: "clickHb"
 		});
 	});
+	/*
 	hoverboardCircle.addEventListener("mouseover", event => {
 		var xpos = event.offsetX;
 		var ypos = event.offsetY;
-	})
+		clientToServer({
+			name: "overHoverboard";
+			xpos: xpos;
+			ypos: ypos;
+		})
+	})*/
 
 }
 
