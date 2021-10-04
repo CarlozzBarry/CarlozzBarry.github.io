@@ -84,13 +84,10 @@ function coordinatesHb(event){
 	}
 
 	function clearCoors(event){
-		/*	document.getElementById("hbx").innerHTML = "";
-			document.getElementById("hby").innerHTML = "";
-			document.getElementById("fhx").innerHTML = "";
-			document.getElementById("fhy").innerHTML = "";
-			document.getElementById("wcx").innerHTML = "";
-			document.getElementById("wcy").innerHTML = "";
-		*/}
+			clientToServer({
+		name: "clear",
+		})
+		}
 
 		function clientToServer(msg){
 			socket.emit("clientToServer", msg);
