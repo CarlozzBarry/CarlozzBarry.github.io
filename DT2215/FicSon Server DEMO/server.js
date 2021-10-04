@@ -68,10 +68,6 @@ io.on('connection', function(socket){
 		io.emit('serverToClient', msg);
 	
 	});
-	
-	
-});
-
 
 'use strict';
 

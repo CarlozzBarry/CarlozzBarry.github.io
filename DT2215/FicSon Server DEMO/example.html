@@ -14,19 +14,19 @@ span {font-size:30px;}
 
 <p>Click inside the red DIV element:</p>
 
-<div onmousemove="myFunction(event)"></div>
+<div id="scroller"></div>
 
 <p><span id="demo"></span></p>
 
 
 <script>
-function myFunction(event) {
-  
-  var x = event.clientX;
-  var y = event.clientY;
-  var coor = "Coordinates: (" + x + "," + y + ")";
-  document.getElementById("demo").innerHTML = coor;
-}
+  window.addEventListener("load", document.querySelector("#scroller").addEventListener("touchmove", function f(event) {
+  var x = event.touches[0].clientX;
+  var y = event.touches[0].clientY;
+  document.getElementById("demo").innerHTML = x + ", " + y;
+
+})
+  );
 </script>
 
 </body>

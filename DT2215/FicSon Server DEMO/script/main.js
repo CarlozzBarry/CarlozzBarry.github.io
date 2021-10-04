@@ -1,6 +1,5 @@
 var socket;
 var sound = document.querySelector("#sound1");
-let 
 
 document.querySelector("#start_sound_button").addEventListener("click", e => {
 	webAudioXML.start("AudioBufferSourceNode");
@@ -16,19 +15,23 @@ function play(){
 }
 
 
-window.addEventListener('load', () => {
+window.addEventListener('load', event => {
 
 	console.log("init");
 	socket = io();
 	
 	socket.on('serverToClient', msg => {
-
 		switch(msg.name){
-			case "mouseHoveringHb":
-  		document.getElementById("hbx").innerHTML = msg.x;
+			case "Hb":
+			document.getElementById("hbx").innerHTML = msg.x;
 		 	break;
-		}
 
+		 /*	case "Fh":
+		 	break;
+
+		 	case "Wc":
+		 	break;*/
+		}
 	});
 
 });

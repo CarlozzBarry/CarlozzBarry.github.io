@@ -23,17 +23,17 @@ let hoverboardRectStatus = false;
 hoverboardRect.style.pointerEvents = "none";
 hoverboardRect.style.opacity = "0.5";
 
-function hoverboardRectToggle() {
-  if (hoverboardRectStatus == false) {
-    hoverboardRect.style.pointerEvents = "auto";
+function touchAreaToggle() {
+  if (touchAreaStatus == false) {
+    touchArea.style.pointerEvents = "auto";
     touchArea.style.opacity = "1";
-    hoverboardRectStatus = true;
+    touchAreaStatus = true;
   }
 }
 
-function hoverboardRectUp(event) {
+function touchAreaUp(event) {
   compareButton.disabled = false;
-  hoverboardRect.innerHTML = "Sound saved";
+  touchArea.innerHTML = "Sound saved";
 
   event.preventDefault();
 }
