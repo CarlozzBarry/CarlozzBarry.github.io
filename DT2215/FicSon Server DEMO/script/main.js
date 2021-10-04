@@ -24,13 +24,19 @@ window.addEventListener('load', event => {
 		switch(msg.name){
 			case "Hb":
 			document.getElementById("hbx").innerHTML = msg.x;
+			document.getElementById("hby").innerHTML = msg.y;
 		 	break;
 
-		 /*	case "Fh":
+		  case "Fh":
+		 	document.getElementById("fhx").innerHTML = msg.x;
+			document.getElementById("fhy").innerHTML = msg.y;
 		 	break;
 
 		 	case "Wc":
-		 	break;*/
+			document.getElementById("wcx").innerHTML = msg.x;
+			document.getElementById("wcy").innerHTML = msg.y;
+		 	break;
+
 		}
 	});
 

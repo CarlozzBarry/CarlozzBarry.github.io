@@ -13,7 +13,7 @@ window.addEventListener("load", coordinatesWc);
 
 function coordinatesHb(event){
 	var hbxpos = Math.round(event.touches[0].clientX);
-	var hbypos = Math.round(event.touches[0].clientY);
+	var hbypos = Math.round(400-event.touches[0].clientY);
 		//document.getElementById("hbx").innerHTML = hbxpos;
 		//document.getElementById("hby").innerHTML = hbypos;
 	clientToServer({
@@ -24,7 +24,7 @@ function coordinatesHb(event){
 	}
 	function coordinatesFh(event){
 		var fhxpos = Math.round(event.touches[0].clientX);
-		var fhypos = Math.round(event.touches[0].clientY);
+		var fhypos = Math.round(400-event.touches[0].clientY);
 		//document.getElementById("fhx").innerHTML = fhxpos;
 		//document.getElementById("fhy").innerHTML = fhypos;
 		clientToServer({
@@ -35,7 +35,7 @@ function coordinatesHb(event){
 	}
 	function coordinatesWc(event){
 		var wcxpos = Math.round(event.touches[0].clientX);
-		var wcypos = Math.round(event.touches[0].clientY);
+		var wcypos = Math.round(400-event.touches[0].clientY);
 		//document.getElementById("wcx").innerHTML = wcxpos;
 		//document.getElementById("wcy").innerHTML = wcypos;
 		clientToServer({

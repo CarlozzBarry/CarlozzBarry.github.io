@@ -16,17 +16,17 @@ var events = process.argv[2] == "clear" ? [] : store.get(param) || [];
 //store.save();
 
 function addEvent(event){
-	
-	event.time = Date.now();
-	events.push(event);
+  
+  event.time = Date.now();
+  events.push(event);
 
-	//console.log(event);
-	//console.log("---------");
+  //console.log(event);
+  //console.log("---------");
 }
 
 function saveData(){
-	store.set(param, events);
-	store.save();
+  store.set(param, events);
+  store.save();
 }
 
 */
@@ -42,8 +42,8 @@ app.get('/*', function(req, res){
   var basePath = pathArr[0];
   var restPath;
   if(pathArr.length>1){
-  	 restPath = pathArr[1];
-  	 //fix params here if necessary
+     restPath = pathArr[1];
+     //fix params here if necessary
 
   }
 
@@ -60,14 +60,18 @@ var time;
 
 
 io.on('connection', function(socket){
-	console.log('client connected');
-		
-	socket.on('clientToServer', function(msg){
-		
-		console.log('clientToServer', msg);		
-		io.emit('serverToClient', msg);
-	
-	});
+  console.log('client connected');
+    
+  socket.on('clientToServer', function(msg){
+    
+    console.log('clientToServer', msg);   
+    io.emit('serverToClient', msg);
+  
+  });
+  
+  
+});
+
 
 'use strict';
 
