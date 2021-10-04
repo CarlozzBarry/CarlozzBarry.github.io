@@ -1,27 +1,16 @@
-let hoverboardRect = document.getElementById("hoverboardRect");
-let fluctuatingRect = document.getElementById("fluctuatingRect");
-let wheelchairRect = document.getElementById("wheelchairRect");
 
-let hoverboardCircle1 = document.getElementById("hoverboardCircle1");
-let fluctuatingCircle1 = document.getElementById("fluctuatingCircle1");
-let wheelchairCircle1 = document.getElementById("wheelchairCircle1");
+let touchArea = document.getElementById("touchArea");
+let compareButton = document.getElementById("compareButton");
+let playButton = document.getElementById("playButton");
 
-let hoverboardCircle2 = document.getElementById("hoverboardCircle2");
-let fluctuatingCircle2 = document.getElementById("fluctuatingCircle2");
-let wheelchairCircle2 = document.getElementById("wheelchairCircle2");
-
-let hoverboardCircle3 = document.getElementById("hoverboardCircle3");
-let fluctuatingCircle3 = document.getElementById("fluctuatingCircle3");
-let wheelchairCircle3 = document.getElementById("wheelchairCircle3");
-
-hoverboardRect.onpointerup = hoverboardRectUp;
-hoverboardRect.onpointerdown = hoverboardRectDown;
+touchArea.onpointerup = touchAreaUp;
+touchArea.onpointerdown = touchAreaDown;
 playButton.onclick = playButtonClick;
 compareButton.onclick = compareButtonClick;
 
-let hoverboardRectStatus = false;
-hoverboardRect.style.pointerEvents = "none";
-hoverboardRect.style.opacity = "0.5";
+let touchAreaStatus = false;
+touchArea.style.pointerEvents = "none";
+touchArea.style.opacity = "0.5";
 
 function touchAreaToggle() {
   if (touchAreaStatus == false) {
@@ -38,9 +27,9 @@ function touchAreaUp(event) {
   event.preventDefault();
 }
 
-function hoverboardRectDown(event) {
-  hoverboardRect.innerHTML = "";
-  hoverboardRect.style.cssText = "border-color:transparent;";
+function touchAreaDown(event) {
+  touchArea.innerHTML = "";
+  touchArea.style.cssText = "border-color:transparent;";
 
   event.preventDefault();
 }

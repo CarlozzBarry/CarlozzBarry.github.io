@@ -6,10 +6,47 @@ var socket;
 var hoverboardCircle = document.querySelector("#hoverboardCircle");
 var hangerCircle = document.querySelector("#hangerCircle");
 var wheelchairCircle = document.querySelector("#wheelchairCircle");
+var exes = []; 
+var ys = [];  
 
 window.addEventListener("load", coordinatesHb);
 window.addEventListener("load", coordinatesFh);
 window.addEventListener("load", coordinatesWc);
+
+document.querySelector("body").addEventListener("ontouchmove", function coordinatesStorage() {
+	var xgen = event.touches[0].clientX;
+	var ygen = event.touches[0].clientY
+
+})
+
+function download_txt(textToSave) {
+
+  var hiddenElement = document.createElement('a');
+
+  hiddenElement.href = 'data:attachment/text,' + encodeURI(textToSave);
+  hiddenElement.target = '_blank';
+  hiddenElement.download = 'userRecording.txt';
+  hiddenElement.click();
+}
+
+
+/*document.body.addEventListener("touchmove", function storage(event){
+var exes = [];
+var ys = [];
+while(!document.querySelector('#saveBtn').click()){
+ var mouseX = event.touches[0].clientX;
+ var mouseY = event.touches[0].clientY;  
+  exes.push([mouseX]);
+  ys.push([mouseY]);
+ if(document.querySelector('#saveBtn').click()){
+ 	var text = "X values: " + exes + "\b" + "Y values: " + ys;
+ 	this.download_txt(text);
+ } 		
+}
+  document.getElementById("results").innerHTML = "You have clicked at: " + JSON.stringify(coords);
+}
+)
+*/
 
 function coordinatesHb(event){
 	var hbxpos = Math.round(event.touches[0].clientX);
@@ -22,6 +59,7 @@ function coordinatesHb(event){
 		y: hbypos
 	})
 	}
+
 	function coordinatesFh(event){
 		var fhxpos = Math.round(event.touches[0].clientX);
 		var fhypos = Math.round(400-event.touches[0].clientY);
