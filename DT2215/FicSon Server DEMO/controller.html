@@ -19,8 +19,8 @@ body{
 		#hoverboardCircle, #wheelchairCircle, #hangerCircle{
 			  left: 0px;
 			  bottom: 0px;
-			  width: 300px;
-   		      height: 300px;
+			  width: 400px;
+   		      height: 400px;
 			  border-radius: 50%;
 			  display: flex;
 			  flex-wrap: wrap;
@@ -36,6 +36,9 @@ body{
 		table{
 			margin: auto;
 						
+		}
+		.space{
+			height: 10px;
 		}
 		td{
 			border: 5%;
@@ -89,11 +92,7 @@ body{
 	</style>
 </head>
 <body>
-	<div id="buttons">
-		<button class="button" id="resetBtn" onclick="clearCoors(event);" style="vertical-align:middle"><span>Reset</span></button>
-		<button class="button" id="beginBtn" style="vertical-align:middle"><span>Begin</span></button>
-		<button class="button" id="saveBtn" style="vertical-align:middle"><span>Save</span></button>
-	</div>
+	<div class="space"></div>
 	<table>
 		<tr>
 			<td>
@@ -115,9 +114,15 @@ body{
 			</td>
 		</tr>
 	</table>
-	<div>
+	<div style="height: 25px;"></div>
+		<div id="buttons">
+		<button class="button" id="resetBtn" onclick="clearCoors(event);" style="vertical-align:middle"><span>Reset</span></button>
+		<button class="button" id="beginBtn" style="vertical-align:middle"><span>Begin</span></button>
+		<button class="button" id="saveBtn" style="vertical-align:middle"><span>Save</span></button>
+	</div>
+	<!--div>
 
-	<!--h2>Coordinates</h2>
+	h2>Coordinates</h2>
 	<ul>
 		<li> Hoverboard
 		<ul>

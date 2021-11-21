@@ -1,0 +1,18 @@
+
+html, body {
+  font-family: sans-serif;
+}
+
+
+input#slider1, img{
+  margin-top: 1em;
+  width: 100%;
+  display: block;
+}
+
+#marker {
+  width: 2px;
+  background-color: black;
+  display: block;
+  position: absolute;
+}

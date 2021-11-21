@@ -49,39 +49,42 @@ while(!document.querySelector('#saveBtn').click()){
 */
 
 function coordinatesHb(event){
-	var hbxpos = Math.round(event.touches[0].clientX)/300;
-	var hbypos = 2 - (Math.round(event.touches[0].clientY)/300);
+	var hbxpos = 1-(410-event.touches[0].clientX)/400;
+	var hbypos = (410-event.touches[0].clientY)/400;
 		//document.getElementById("hbx").innerHTML = hbxpos;
 		//document.getElementById("hby").innerHTML = hbypos;
+	if(hbxpos >= 0 && hbxpos <= 1 && hbypos >= 0 && hbypos <= 1){
 	clientToServer({
 		name: "Hb",
 		x: hbxpos,
 		y: hbypos
 	})
-	}
+	}}
 
 	function coordinatesFh(event){
-		var fhxpos = Math.round(event.touches[0].clientX)/300;
-		var fhypos = 2-(Math.round(event.touches[0].clientY)/300);
+		var fhxpos = 1-(830-event.touches[0].clientX)/400;
+		var fhypos = (410-event.touches[0].clientY)/400;
 		//document.getElementById("fhx").innerHTML = fhxpos;
 		//document.getElementById("fhy").innerHTML = fhypos;
+		if(fhxpos >= 0 && fhxpos <= 1 && fhypos >= 0 && fhypos <= 1){
 		clientToServer({
 		name: "Fh",
 		x: fhxpos,
 		y: fhypos
 	})
-	}
+	}}
 	function coordinatesWc(event){
-		var wcxpos = Math.round(event.touches[0].clientX)/300;
-		var wcypos = 2-(Math.round(event.touches[0].clientY)/300);
+		var wcxpos = 1-(1250-event.touches[0].clientX)/400;
+		var wcypos = (410-event.touches[0].clientY)/400;
 		//document.getElementById("wcx").innerHTML = wcxpos;
 		//document.getElementById("wcy").innerHTML = wcypos;
+		if(wcxpos >= 0 && wcxpos <= 1 && wcypos >= 0 && wcypos <= 1){
 		clientToServer({
 		name: "Wc",
 		x: wcxpos,
 		y: wcypos
 	})
-	}
+	}}
 
 	function clearCoors(event){
 			clientToServer({
