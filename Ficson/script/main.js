@@ -13,6 +13,7 @@ window.addEventListener('load', event => {
 			//document.getElementById("hby").innerHTML = msg.y;
 			webAudioXML.setVariable("x1", msg.x);
 			webAudioXML.setVariable("y1", msg.y);
+			console.log("msg.x");
 		 	break;
 
 		  case "Fh":
@@ -30,7 +31,7 @@ window.addEventListener('load', event => {
 		 	break;
 
 		 	case "pause":
-		 	document.getElementById("video").stop();
+		 	document.getElementsByClassName("video").stop();
 		 	break;
 
 		 	case "restart":
