@@ -86,11 +86,17 @@ function coordinatesHb(event){
 	})
 	}}
 
-	function clearCoors(event){
+	function pause(event){
 			clientToServer({
-		name: "clear",
+		name: "pause",
 		})
 		}
+
+	function restart(event){
+		clientToServer({
+			name: "restart",
+		})
+	}
 
 		function clientToServer(msg){
 			socket.emit("clientToServer", msg);
