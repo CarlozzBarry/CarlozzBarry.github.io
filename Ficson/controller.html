@@ -29,6 +29,19 @@ body{
 			  
 
 		}
+
+			#hoverboardBar, #wheelchairBar, #hangerBar, #ambienceBar{
+			  left: 0px;
+			  bottom: 0px;
+			  width: 400px;
+   		      height: 35px;
+			  display: flex;
+			  flex-wrap: wrap;
+			  overflow: hidden;
+			  position: relative;
+			  
+
+		}
 		#gap{
 			width: 30px;
 			display: flex;
@@ -97,13 +110,16 @@ body{
 		<tr>
 			<td>
 				<div ontouchmove ="coordinatesHb(event)" id="hoverboardCircle" style="background-color: red;"></div>
+				Fleeting Board
 			</td>
 			<td>
 				<div ontouchstart="clearCoors(event)" id="gap">
+
 			</div>
 			</td>
 			<td>
 				<div ontouchmove="coordinatesFh(event)" id="hangerCircle" style="background-color: blue;"></div>
+				Wheelchair
 			</td>
 			<td>
 				<div ontouchstart="clearCoors(event)" id="gap">
@@ -111,13 +127,44 @@ body{
 			</td>
 			<td>
 				<div ontouchmove="coordinatesWc(event)" id="wheelchairCircle" style="background-color: green;"></div>
+				Hang-flyer
 			</td>
 		</tr>
+		<tr>
+		<td>
+				<div ontouchmove ="mixerHb(event)" id="hoverboardBar" style="background-color: red;"></div>
+				
+			</td>
+			<td>
+				<div ontouchstart="clearCoors(event)" id="gap">
+
+			</div>
+			</td>
+			<td>
+				<div ontouchmove="mixerFh(event)" id="hangerBar" style="background-color: blue;"></div>
+			</td>
+			<td>
+				<div ontouchstart="clearCoors(event)" id="gap">
+			</div>
+			</td>
+			<td>
+				<div ontouchmove="mixerWc(event)" id="wheelchairBar" style="background-color: green;"></div>
+			</td>	
+		</tr>
+
+		<tr>
+			<td>Ambience
+			<div ontouchmove="ambienceLevel(event)" id="ambienceBar" style="background-color: grey;"></div>
+			</td>
+			<td></td>
+			<td></td>
+		</tr>
 	</table>
-	<div style="height: 25px;"></div>
+	<div style="height: 10px;"></div>
 		<div id="buttons">
 		<button class="button" id="pauseBtn" ontouchstart="pause(event)" style="vertical-align:middle"><span>Pause</span></button>
 		<button class="button" id="restartBtn" ontouchstart="restart(event);" style="vertical-align:middle"><span>Restart</span></button>
+		<button class="button" id="resetBtn" ontouchstart="reset(event);" style="vertical-align:middle"><span>Reset</span></button>
 		<button class="button" id="saveBtn" style="vertical-align:middle"><span>Save</span></button>
 	</div>
 	<!--div>

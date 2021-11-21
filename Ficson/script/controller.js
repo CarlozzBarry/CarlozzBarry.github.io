@@ -86,6 +86,35 @@ function coordinatesHb(event){
 	})
 	}}
 
+	function mixerHb(event){
+		var xHb = 1-(410-event.touches[0].clientX)/400;
+		clientToServer({
+			name: "mixHb",
+			x: xHb
+			}) 
+		}
+	
+	function mixerFh(event){
+		var xFh = 1-(830-event.touches[0].clientX)/400;
+		clientToServer({
+			name: "mixFh",
+			x: xFh
+			}) 
+	}
+	function mixerWc(event){
+		var xWc = 1-(1250-event.touches[0].clientX)/400;
+		clientToServer({
+			name: "mixWc",
+			x: xWc
+			}) 
+	}
+	function ambienceLevel(event){
+		var ambience = 1-(410-event.touches[0].clientX)/400;
+		clientToServer({
+			name: "mixAmb",
+			x: xAmb
+			}) 
+	}
 	function pause(event){
 			clientToServer({
 		name: "pause",
@@ -97,6 +126,13 @@ function coordinatesHb(event){
 			name: "restart",
 		})
 	}
+
+	function reset(event){
+		clientToServer({
+			name: "reset",
+		})
+		}
+	
 
 		function clientToServer(msg){
 			socket.emit("clientToServer", msg);

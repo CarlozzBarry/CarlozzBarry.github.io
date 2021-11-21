@@ -13,7 +13,6 @@ window.addEventListener('load', event => {
 			//document.getElementById("hby").innerHTML = msg.y;
 			webAudioXML.setVariable("x1", msg.x);
 			webAudioXML.setVariable("y1", msg.y);
-			console.log("msg.x");
 		 	break;
 
 		  case "Fh":
@@ -26,16 +25,44 @@ window.addEventListener('load', event => {
 		 	case "Wc":
 			//document.getElementById("wcx").innerHTML = msg.x;
 			//document.getElementById("wcy").innerHTML = msg.y;
-			webAudioXML.setVariable("x1", msg.x);
-			webAudioXML.setVariable("y1", msg.y);
+			webAudioXML.setVariable("x2", msg.x);
+			webAudioXML.setVariable("y2", msg.y);
+		 	break;
+
+		 	case "mixHb":
+			//document.getElementById("wcx").innerHTML = msg.x;
+			//document.getElementById("wcy").innerHTML = msg.y;
+			webAudioXML.setVariable("$gain1", msg.x);
+		 	break;
+
+		 	case "mixFh":
+			//document.getElementById("wcx").innerHTML = msg.x;
+			//document.getElementById("wcy").innerHTML = msg.y;
+			webAudioXML.setVariable("$gain3", msg.x);
+		 	break;
+
+		 	case "mixWc":
+			//document.getElementById("wcx").innerHTML = msg.x;
+			//document.getElementById("wcy").innerHTML = msg.y;
+			webAudioXML.setVariable("$gain2", msg.x);
 		 	break;
 
 		 	case "pause":
-		 	document.getElementsByClassName("video").stop();
 		 	break;
 
 		 	case "restart":
-		 	document.getElementById("video").play();
+		 	break;
+
+		 	case "reset":
+		 	webAudioXML.setVariable("x1", 0.5);
+			webAudioXML.setVariable("y1", 0.5);
+			webAudioXML.setVariable("x2", 0.5);
+			webAudioXML.setVariable("y2", 0.5);
+		 	webAudioXML.setVariable("x3", 0.5);
+			webAudioXML.setVariable("y3", 0.5);
+			webAudioXML.setVariable("$gain1", 0.5);
+			webAudioXML.setVariable("$gain2", 0.5);
+			webAudioXML.setVariable("$gain3", 0.5);
 		 	break;
 		}
 	});
