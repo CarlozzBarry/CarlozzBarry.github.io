@@ -1,6 +1,7 @@
 var socket;
 var sound = document.querySelector("#sound1");
 
+
 window.addEventListener('load', event => {
 
 	console.log("init");
@@ -9,15 +10,19 @@ window.addEventListener('load', event => {
 	socket.on('serverToClient', msg => {
 		switch(msg.name){
 			case "Hb":
+
 			//document.getElementById("hbx").innerHTML = msg.x;
 			//document.getElementById("hby").innerHTML = msg.y;
-			webAudioXML.setVariable("x1", msg.x);
+			//$.getscript("webAudioXML.js", setVariable("x1", msg.x));
+			//$.getscript("webAudioXML.js", setVariable("y1", msg.y));
+		 	webAudioXML.setVariable("x1", msg.x);
 			webAudioXML.setVariable("y1", msg.y);
 		 	break;
 
 		  case "Fh":
 		 	//document.getElementById("fhx").innerHTML = msg.x;
 			//document.getElementById("fhy").innerHTML = msg.y;
+			//$.getscript("plugins/webAudioXML.js", setVariable("x3", msg.x));
 			webAudioXML.setVariable("x3", msg.x);
 			webAudioXML.setVariable("y3", msg.y);
 		 	break;

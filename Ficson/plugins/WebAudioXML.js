@@ -5118,7 +5118,7 @@ class Synth{
     this._variables = val;
   }
 
-	setVariable(key, val){
+    setVariable(key, val){
 		this._variables[key] = val;
 	}
 

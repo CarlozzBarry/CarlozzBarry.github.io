@@ -112,7 +112,7 @@ function coordinatesHb(event){
 		var ambience = 1-(410-event.touches[0].clientX)/400;
 		clientToServer({
 			name: "mixAmb",
-			x: xAmb
+			x: ambience
 			}) 
 	}
 	function pause(event){
