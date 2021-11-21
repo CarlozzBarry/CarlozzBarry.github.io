@@ -2,104 +2,14 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-		<title>Ficson - Fiction Sonification Design</title>
-		<link href="style.css" rel="stylesheet" type="text/css" />
-		<script src="plugins/max.size.js"></script>
+		<title>iMusic - WebAudioXML - NodeJS - Socket.io</title>
+		<!--script src="script/socket.io-1.4.5.js"></script-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js" integrity="sha512-WL6WGKMPBiM9PnHRYIn5YEtq0Z8XP4fkVb4qy7PP4vhmYQErJ/dySyXuFIMDf1eEYCXCrQrMJfkNwKc9gsjTjA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<link href="mystyle.css" rel="stylesheet" type="text/css" />
 	</head>
-
-
 	<body>
-
-		<h1>Ficson - Audio Prototype</h1>
-		<p>Open the control panel and edit the sounds.</p>
-
-		<video 
-			controls="true" 
-			loop="true" 
-			autoplay muted
-			data-waxml-timeupdate-time="this.currentTime"
-			data-waxml-play-master="1"
-			data-waxml-pause-master="0"
-			>
-			<source src="video/ficson_test_v2.mov" />
-		</video>
-
-		<h3>Added sounds 1-4 (clockwise)</h3>
-		
-		<waxml-xy-area 
-			background-color="#69CEEC" 
-			grid-color="#CBE3EA" 
-			columns="8" 
-			rows="8">
-			<div>Fleeting Board</div>
-			<waxml-xy-handle
-				data-waxml-target="x3, y3"
-				x="0.5"
-				y="0.5"
-				data-waxml-pointerdown-solo="3"
-				data-waxml-pointerup-solo="0"
-			></waxml-xy-handle>
-		</waxml-xy-area>
-
-		<waxml-xy-area 
-			background-color="#F6EDD9" 
-			grid-color="#D5CCB9" 
-			columns="8" 
-			rows="8">
-			<div>Wheelchair</div>
-			<waxml-xy-handle
-				data-waxml-target="x2, y2"
-				x="0.5"
-				y="0.5"
-				data-waxml-pointerdown-solo="2"
-				data-waxml-pointerup-solo="0"
-			></waxml-xy-handle>
-		</waxml-xy-area>
-
-		<waxml-xy-area 
-			background-color="#E5B6DD" 
-			grid-color="#F5E6F2" 
-			columns="8" 
-			rows="8">
-			<div>Hang-Flyer</div>
-			<waxml-xy-handle
-				data-waxml-target="x1, y1"
-				x="0.5"
-				y="0.5"
-				data-waxml-pointerdown-solo="1"
-				data-waxml-pointerup-solo="0"
-			></waxml-xy-handle>
-
-		</waxml-xy-area>
-
-		<!-- <iframe width="300" height="169" src="https://www.youtube.com/embed/o6LX3bdbnVo" title="Ficson Prototype" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-		
-		<!-- <h3>Time:</h3>
-		<input type="range" min="0" max="30" step="0.01" data-waxml-target="$time" data-waxml-xautomation="sawtooth, 1/10"/>
-		 -->
-		<h3>Mixer:</h3>
-		<input type="range" min="0" max="1" step="0.01" data-waxml-target="$gain3" />
-		<input type="range" min="0" max="1" step="0.01" data-waxml-target="$gain2" />
-		<input type="range" min="0" max="1" step="0.01" data-waxml-target="$gain1" />
-
-		<h4>Ambience:</h4>
-		<input type="range" min="0" max="1" step="0.01" data-waxml-target="$ambienceGain" />
-
-		<h3>Calibration:</h3>
-		<button data-waxml-pointerdown-calibration="1">ON</button>
-		<button data-waxml-pointerdown-calibration="0">OFF</button>
-		<!-- <h3>Speed:</h3>
-		<input type="range" min="0" max="1" step="0.01" data-waxml-target="$speed3" data-waxml-xautomation="sine, 0.5"/>
-		<input type="range" min="0" max="1" step="0.01" data-waxml-target="$speed2" data-waxml-xautomation="sine, 0.2" />
-		<input type="range" min="0" max="1" step="0.01" data-waxml-target="$speed1" data-waxml-xautomation="sine, 0.7" /> -->
-
-
-		<!-- <h3>Pan:</h3>
-		<input type="range" min="-10" max="10" step="0.01" value="-5" data-waxml-target="$pan3" />
-		<input type="range" min="-10" max="10" step="0.01" value="0" data-waxml-target="$pan2" />
-		<input type="range" min="-10" max="10" step="0.01" value="5" data-waxml-target="$pan1" /> -->
-
-		<script src="plugins/WebAudioXML.js" data-source="audio-data/audio.xml"></script>
-		<script src="plugins/script.js"></script>
+		<h1><a href="main.html">Open Main</a></h1>
+		<hr />
+		<h1><a href="controller.html">Open Controller</a></h1>
 	</body>
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<style>
+div {border:1px solid red; border-radius: 50%; height:300px;}
+span {font-size:30px;}
+</style>
+<body>
+
+<h1>MouseEvent offsetX Property</h1>
+
+<p>The offsetX property returns the x-coordinate the mouse cursor, relative to the target element.</p>
+
+<p>In this example, the red DIV is the target element.</p>
+
+<p>Click inside the red DIV element:</p>
+
+<div id="scroller"></div>
+
+<p><span id="demo"></span></p>
+
+
+<script>
+  window.addEventListener("load", document.querySelector("#scroller").addEventListener("touchmove", function f(event) {
+  var x = event.touches[0].clientX;
+  var y = event.touches[0].clientY;
+  document.getElementById("demo").innerHTML = x + ", " + y;
+
+})
+  );
+</script>
+
+</body>
+</html>

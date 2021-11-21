@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>MAIN</title>
+		<link href="mystyle.css" rel="stylesheet" type="text/css" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="WebAudioXML.js" data-source="audio.xml"></script>
+		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js" integrity="sha512-WL6WGKMPBiM9PnHRYIn5YEtq0Z8XP4fkVb4qy7PP4vhmYQErJ/dySyXuFIMDf1eEYCXCrQrMJfkNwKc9gsjTjA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+		<script type="text/javascript" src="script/socket.io.js"></script>
+		<style type="text/css">
+	
+	
+	
+html {
+  scroll-behavior: smooth;
+}
+
+		.container{
+			border: 5px solid black;
+		}
+
+		.center {
+			  display: block;
+	    	  margin-left: auto;
+			  margin-right: auto;
+			  border-left: 1% black solid; 
+			  border-right: 1% black solid; 
+			  border-top: 1% black solid; 
+			  border-bottom: 1% black solid; 
+			  margin: auto;"
+		}
+	    .topnav {
+		   background-color: blue;
+		   overflow: hidden;
+		   color: orange;
+}
+
+.interface{
+	  background-color: #e0e0e0;
+}
+		   .col-sm-4 {
+
+  border-radius: 5px 5px 0 0;
+  display: flex; /* added */
+  align-items: center; /* added */
+}
+		
+	#footer{
+		background-color: grey;
+	}	
+		svg
+	{
+		margin-left: auto; 
+		margin-right: auto;
+
+	}
+		/* Style the links inside the navigation bar */
+		.topnav a {
+		  font-size: 20px;
+		  float: left;
+		  color: orange;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  
+		}
+		.videoContainer{
+			padding: 5%;
+		}
+		th, td{
+			text-align: center;
+			border: 1px black solid;
+			border-collapse: collapse;
+		}
+		/* Change the color of links on hover */
+		.topnav a:hover {
+		  background-color: orange;
+		  color: blue;
+		
+</style>
+	</head>
+
+
+	<body>
+		<h1 style="text-align: center; margin-right: auto; margin-left: auto;">Video page</h1>
+		<div id="output"></div>
+		<div class="topnav">
+  <a href="https://carlozzbarry.github.io/index.html">Back to portfolio</a>
+   <a href="https://carlozzbarry.github.io/DT2215/FicSon Server DEMO/index.html">Main page</a>
+  <a href="https://carlozzbarry.github.io/DT2215/controller.html">Controller</a>
+  <button id="start_sound_button">Start Sound</button>
+  <button id="stop_sound_button">Stop Sound</button>
+
+</div>
+<div class="videoContainer">
+	<video id="video" controls loop width="100%">
+		<source src="VideoFicson.mp4" type="video/mp4" onclick="play()">
+	</video>
+</div>
+<div class="interface" style="margin-top:auto; margin-right: auto; margin-left: auto; margin-bottom: 10%; width: 75%"><h2>Coordinates</h2>
+	<ul>
+		<li> Hoverboard
+		<ul>
+			<li><span id="hbx" class="coordinateNumber" style="font-size: 20px;"></span></li>
+			<li><span id="hby" class="coordinateNumber" style="font-size: 20px;"></span></li>
+		</ul>
+		</li>
+		<li> Flying Hanger
+		<ul>
+			<li><span id="fhx" class="coordinateNumber" style="font-size: 20px;"></span></li>
+			<li><span id="fhy" class="coordinateNumber" style="font-size: 20px;"></span></li>
+		</ul>
+		</li>
+		<li> Wheelchair
+		<ul>
+			<li><span id="wcx" class="coordinateNumber" style="font-size: 20px;"></span></li>
+			<li><span id="wcy" class="coordinateNumber" style="font-size: 20px;"></span></li>
+		</ul>
+		</li>			
+	</ul>
+	</div>
+<script src="script/main.js"></script>
+	</body>
+</html>
