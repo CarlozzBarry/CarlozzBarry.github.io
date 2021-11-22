@@ -86,7 +86,7 @@ function coordinatesHb(event){
 	})
 	}}
 
-	function mixerHb(event){
+/*	function mixerHb(event){
 		var xHb = 1-(410-event.touches[0].clientX)/400;
 		clientToServer({
 			name: "mixHb",
@@ -120,10 +120,10 @@ function coordinatesHb(event){
 		name: "pause",
 		})
 		}
-
-	function restart(event){
+*/
+	function done(event){
 		clientToServer({
-			name: "restart",
+			name: "I'm done",
 		})
 	}
 
