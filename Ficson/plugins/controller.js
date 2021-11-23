@@ -30,10 +30,8 @@ function download_txt(textToSave) {
 }
 
 
-/*document.body.addEventListener("touchmove", function storage(event){
-var exes = [];
-var ys = [];
-while(!document.querySelector('#saveBtn').click()){
+/*function done(event){
+{
  var mouseX = event.touches[0].clientX;
  var mouseY = event.touches[0].clientY;  
   exes.push([mouseX]);
@@ -45,8 +43,8 @@ while(!document.querySelector('#saveBtn').click()){
 }
   document.getElementById("results").innerHTML = "You have clicked at: " + JSON.stringify(coords);
 }
-)
 */
+
 
 function coordinatesHb(event){
 	var hbxpos = 1-(410-event.touches[0].clientX)/400;
@@ -85,6 +83,13 @@ function coordinatesHb(event){
 		y: wcypos
 	})
 	}}
+
+	function solo(value){
+		clientToServer({
+			name: "solo",
+			value: value
+		})
+	}
 
 /*	function mixerHb(event){
 		var xHb = 1-(410-event.touches[0].clientX)/400;

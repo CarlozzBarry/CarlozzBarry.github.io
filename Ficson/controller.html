@@ -109,7 +109,7 @@ body{
 	<table>
 		<tr>
 			<td>
-				<div ontouchmove ="coordinatesHb(event)" id="hoverboardCircle" style="background-color: red;"></div>
+				<div ontouchmove ="coordinatesHb(event)" ontouchstart="solo(1)" ontouchend="solo(0)" id="hoverboardCircle" style="background-color: lightblue;"></div>
 				Fleeting Board
 			</td>
 			<td>
@@ -118,7 +118,7 @@ body{
 			</div>
 			</td>
 			<td>
-				<div ontouchmove="coordinatesFh(event)" id="hangerCircle" style="background-color: blue;"></div>
+				<div ontouchmove="coordinatesFh(event)" ontouchstart="solo(2)" ontouchend="solo(0)" id="hangerCircle" style="background-color: lightgreen;"></div>
 				Wheelchair
 			</td>
 			<td>
@@ -126,7 +126,7 @@ body{
 			</div>
 			</td>
 			<td>
-				<div ontouchmove="coordinatesWc(event)" id="wheelchairCircle" style="background-color: green;"></div>
+				<div ontouchmove="coordinatesWc(event)" ontouchstart="solo(3)" ontouchend="solo(0)" id="wheelchairCircle" style="background-color: lightredred;"></div>
 				Hang-flyer
 			</td>
 		</tr>

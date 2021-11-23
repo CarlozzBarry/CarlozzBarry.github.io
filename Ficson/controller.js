@@ -6,8 +6,8 @@ var socket;
 var hoverboardCircle = document.querySelector("#hoverboardCircle");
 var hangerCircle = document.querySelector("#hangerCircle");
 var wheelchairCircle = document.querySelector("#wheelchairCircle");
-var exes = []; 
-var ys = [];  
+let exes = []; 
+let ys = [];  
 
 window.addEventListener("load", coordinatesHb);
 window.addEventListener("load", coordinatesFh);
@@ -29,11 +29,8 @@ function download_txt(textToSave) {
   hiddenElement.click();
 }
 
-
-/*document.body.addEventListener("touchmove", function storage(event){
-var exes = [];
-var ys = [];
-while(!document.querySelector('#saveBtn').click()){
+function gestureRecorder(event){
+while(!document.querySelector('#dotn').click()){
  var mouseX = event.touches[0].clientX;
  var mouseY = event.touches[0].clientY;  
   exes.push([mouseX]);
@@ -44,7 +41,7 @@ while(!document.querySelector('#saveBtn').click()){
  } 		
 }
   document.getElementById("results").innerHTML = "You have clicked at: " + JSON.stringify(coords);
-}
+
 )
 */
 
