@@ -85,7 +85,6 @@ function coordinatesHb(event){
 	}}
 
 	function solo(value){
-		
 		clientToServer({
 			name: "solo",
 			value: value
@@ -134,7 +133,6 @@ function coordinatesHb(event){
 	}
 
 	function reset(event){
-		 
 		clientToServer({
 			name: "reset",
 		})
