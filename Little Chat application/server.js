@@ -16,7 +16,7 @@ var events = process.argv[2] == "clear" ? [] : store.get(param) || [];
 //store.save();
 
 function addEvent(event){
-  
+
   event.time = Date.now();
   events.push(event);
 
