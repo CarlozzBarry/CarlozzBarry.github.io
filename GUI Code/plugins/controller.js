@@ -6,8 +6,12 @@ var socket;
 var hoverboardCircle = document.querySelector("#hoverboardCircle");
 var hangerCircle = document.querySelector("#hangerCircle");
 var wheelchairCircle = document.querySelector("#wheelchairCircle");
-var exes = []; 
-var ys = [];  
+var csv = 'Vehicle, Final X, Final Y\n'
+//  let csvContent = "data:text/csv;charset=utf-8,";
+
+var finalCoordsHb = [];
+var finalCoordsWc = [];
+var finalCoordsHf = []; 
 
 window.addEventListener("load", coordinatesHb);
 window.addEventListener("load", coordinatesFh);
@@ -25,15 +29,6 @@ document.addEventListener("contextmenu", function(event){
 	return false;
 })
 
-function download_txt(textToSave) {
-
-  var hiddenElement = document.createElement('a');
-
-  hiddenElement.href = 'data:attachment/text,' + encodeURI(textToSave);
-  hiddenElement.target = '_blank';
-  hiddenElement.download = 'userRecording.txt';
-  hiddenElement.click();
-}
 
 function touchHandler(event){
 	if(event.touches.length > 1){
@@ -41,23 +36,11 @@ function touchHandler(event){
 	}
 }
 
-/*function done(event){
-{
- var mouseX = event.touches[0].clientX;
- var mouseY = event.touches[0].clientY;  
-  exes.push([mouseX]);
-  ys.push([mouseY]);
- if(document.querySelector('#saveBtn').click()){
- 	var text = "X values: " + exes + "\b" + "Y values: " + ys;
- 	this.download_txt(text);
- } 		
-}
-  document.getElementById("results").innerHTML = "You have clicked at: " + JSON.stringify(coords);
-}
-*/
+
 
 
 function coordinatesHb(event){
+	var coords = [];
 	var hbxpos = 1-(650-event.touches[0].clientX)/450;
 	var hbypos = (535-event.touches[0].clientY)/450;
 		//document.getElementById("hbx").innerHTML = hbxpos;
@@ -68,9 +51,11 @@ function coordinatesHb(event){
 		x: hbxpos,
 		y: hbypos
 	})
-	}}
+	coords.push("Hb", hbxpos, hbypos);
+	} return coords}
 
 	function coordinatesWc(event){
+		var coords = [];
 		var fhxpos = 1-(1150-event.touches[0].clientX)/450;
 		var fhypos = (535-event.touches[0].clientY)/450;
 		//document.getElementById("fhx").innerHTML = fhxpos;
@@ -81,8 +66,11 @@ function coordinatesHb(event){
 		x: fhxpos,
 		y: fhypos
 	})
-	}}
+	coords.push("Wc", fhxpos, fhypos);
+	}return coords;}
+
 	function coordinatesHf(event){
+		var coords = [];
 		var wcxpos = 1-(1750-event.touches[0].clientX)/450;
 		var wcypos = (530-event.touches[0].clientY)/450;
 		//document.getElementById("wcx").innerHTML = wcxpos;
@@ -93,7 +81,8 @@ function coordinatesHb(event){
 		x: wcxpos,
 		y: wcypos
 	})
-	}}
+	coords.push("Hf", wcxpos, wcypos);
+	}return coords;}
 
 	function solo(value){
 		clientToServer({
@@ -102,42 +91,34 @@ function coordinatesHb(event){
 		})
 	}
 
-/*	function mixerHb(event){
-		var xHb = 1-(410-event.touches[0].clientX)/400;
-		clientToServer({
-			name: "mixHb",
-			x: xHb
-			}) 
-		}
-	
-	function mixerFh(event){
-		var xFh = 1-(830-event.touches[0].clientX)/400;
-		clientToServer({
-			name: "mixFh",
-			x: xFh
-			}) 
-	}
-	function mixerWc(event){
-		var xWc = 1-(1250-event.touches[0].clientX)/400;
-		clientToServer({
-			name: "mixWc",
-			x: xWc
-			}) 
-	}
-	function ambienceLevel(event){
-		var ambience = 1-(410-event.touches[0].clientX)/400;
-		clientToServer({
-			name: "mixAmb",
-			x: ambience
-			}) 
-	}
-	function pause(event){
-			clientToServer({
-		name: "pause",
-		})
-		}
-*/
 	function done(event){
+{
+  
+	finalCoordsHb.push(this.coordinatesHb(this.coordinatesHb.lenght - 1));
+	finalCoordsWc.push(this.coordinatesWc(this.coordinatesWc.lenght - 1));
+ 	finalCoordsHf.push(this.coordinatesHf(this.coordinatesHf.lenght - 1)); 
+	let csvData = [
+		finalCoordsHb,
+		finalCoordsWc,
+		finalCoordsHf
+	]
+	
+	csvData.forEach(function(row) {
+		csv += row.join(",");
+		csv += "\n";
+		document.write(csv);  
+  
+     
+		var hiddenElement = document.createElement('a');  
+		hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);  
+		hiddenElement.target = '_blank';  
+		  
+		//provide the name for the CSV file to be downloaded  
+		hiddenElement.download = 'Famous Personalities.csv';  
+		hiddenElement.click();  
+	});
+}
+
 		clientToServer({
 			name: "I'm done",
 		})
@@ -168,22 +149,6 @@ function coordinatesHb(event){
 				default:
 				break;
 			}
-
-
-
-
-
-/*
-	hoverboardCircle.addEventListener("mouseover", event => {
-		var xpos = event.offsetX;
-		var ypos = event.offsetY;
-		clientToServer({
-			name: "overHoverboard";
-			xpos: xpos;
-			ypos: ypos;
-		})
-	})*/
-
 }
 
 
