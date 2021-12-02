@@ -6,15 +6,15 @@ var socket;
 var hoverboardCircle = document.querySelector("#hoverboardCircle");
 var hangerCircle = document.querySelector("#hangerCircle");
 var wheelchairCircle = document.querySelector("#wheelchairCircle");
-var csv = 'Vehicle, Final X, Final Y\n'
+var csv = 'Vehicle, Distance, Initial Angle, Transformed Angle\n' //Use polar coordinates FY FAEN
 //  let csvContent = "data:text/csv;charset=utf-8,";
-
+var theta = 0;
 var finalCoordsHb = [];
 var finalCoordsWc = [];
 var finalCoordsHf = []; 
 
 window.addEventListener("load", coordinatesHb);
-window.addEventListener("load", coordinatesFh);
+window.addEventListener("load", coordinatesHf);
 window.addEventListener("load", coordinatesWc);
 
 window.addEventListener("touchstart", touchHandler, false);
@@ -43,45 +43,58 @@ function coordinatesHb(event){
 	var coords = [];
 	var hbxpos = 1-(650-event.touches[0].clientX)/450;
 	var hbypos = (535-event.touches[0].clientY)/450;
-		//document.getElementById("hbx").innerHTML = hbxpos;
-		//document.getElementById("hby").innerHTML = hbypos;
+	
+	let r = Math.sqrt((hbxpos)^2 + (hbypos)^2);
+	let theta = Math.atan2(hbxpos, hbypos);
+	let phi = 2*PI*Math.random() + theta;
+
+	let hbxTras = hbxpos*Math.cos(phi);
+	let hbyTras = hbypos*Math.sin(phi);
 	if(hbxpos >= 0 && hbxpos <= 1 && hbypos >= 0 && hbypos <= 1){
 	clientToServer({
 		name: "Hb",
-		x: hbxpos,
-		y: hbypos
+		x: hbxTras,
+		y: hbyTras
 	})
-	coords.push("Hb", hbxpos, hbypos);
+	coords.push("Hb", r, theta, phi);
 	} return coords}
 
 	function coordinatesWc(event){
 		var coords = [];
 		var fhxpos = 1-(1150-event.touches[0].clientX)/450;
 		var fhypos = (535-event.touches[0].clientY)/450;
-		//document.getElementById("fhx").innerHTML = fhxpos;
-		//document.getElementById("fhy").innerHTML = fhypos;
+		let r = Math.sqrt((fhxpos)^2 + (fxypos)^2);
+		let theta = Math.atan2(fhxpos, fxypos);
+		let phi = 2*PI*Math.random() + theta;
+
+		let fhxTras = fhxpos*Math.cos(phi);
+		let fhyTras = fhypos*Math.sin(phi);
 		if(fhxpos >= 0 && fhxpos <= 1 && fhypos >= 0 && fhypos <= 1){
 		clientToServer({
 		name: "Wc",
-		x: fhxpos,
-		y: fhypos
+		x: fhxTras,
+		y: fhyTras
 	})
-	coords.push("Wc", fhxpos, fhypos);
+	coords.push("Wc", r, theta, phi);
 	}return coords;}
 
 	function coordinatesHf(event){
 		var coords = [];
 		var wcxpos = 1-(1750-event.touches[0].clientX)/450;
 		var wcypos = (530-event.touches[0].clientY)/450;
-		//document.getElementById("wcx").innerHTML = wcxpos;
-		//document.getElementById("wcy").innerHTML = wcypos;
+		let r = Math.sqrt((wcxpos)^2 + (wcypos)^2);
+		let theta = Math.atan2(wcxpos, wcypos);
+		let phi = 2*PI*Math.random() + theta;
+
+		let wcxTras = wcxpos*Math.cos(phi);
+		let wcyTras = wcypos*Math.sin(phi);
 		if(wcxpos >= 0 && wcxpos <= 1 && wcypos >= 0 && wcypos <= 1){
 		clientToServer({
 		name: "Hf",
-		x: wcxpos,
-		y: wcypos
+		x: wcxTras,
+		y: wcyTras
 	})
-	coords.push("Hf", wcxpos, wcypos);
+	coords.push("Hf", r, theta, phi);
 	}return coords;}
 
 	function solo(value){
@@ -98,9 +111,9 @@ function coordinatesHb(event){
 	finalCoordsWc.push(this.coordinatesWc(this.coordinatesWc.lenght - 1));
  	finalCoordsHf.push(this.coordinatesHf(this.coordinatesHf.lenght - 1)); 
 	let csvData = [
-		finalCoordsHb,
-		finalCoordsWc,
-		finalCoordsHf
+		[finalCoordsHb[0], finalCoordsHb[1], finalCoordsHb[2], finalCoordsHb[3]],
+		[finalCoordsWc[0], finalCoordsWc[1], finalCoordsWc[2], finalCoordsWc[3]],
+		[finalCoordsHf[0], finalCoordsHf[1], finalCoordsHf[2], finalCoordsHf[3]],
 	]
 	
 	csvData.forEach(function(row) {
@@ -114,7 +127,7 @@ function coordinatesHb(event){
 		hiddenElement.target = '_blank';  
 		  
 		//provide the name for the CSV file to be downloaded  
-		hiddenElement.download = 'Famous Personalities.csv';  
+		hiddenElement.download = 'Data.csv';  
 		hiddenElement.click();  
 	});
 }
@@ -125,6 +138,7 @@ function coordinatesHb(event){
 	}
 
 	function reset(event){
+		location.reload();
 		clientToServer({
 			name: "reset",
 		})
