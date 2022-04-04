@@ -31,7 +31,8 @@ window.addEventListener('load', event => {
 			break;
 
 		 	case "I'm done":
-		 	//Data logging to be implemented
+		 	/*On the main this is just a flag for separating 
+			 when a user is finished from when the next one has started*/
 			 break;
 
 		 	case "reset":
