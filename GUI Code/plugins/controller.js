@@ -6,12 +6,11 @@ var socket;
 var hoverboardCircle = document.querySelector("#hoverboardCircle");
 var hangerCircle = document.querySelector("#hangerCircle");
 var wheelchairCircle = document.querySelector("#wheelchairCircle");
-var finalCoordsHb = [];
-var finalCoordsWc = [];
-var finalCoordsHf = []; 
+var exes = []; 
+var ys = [];  
 
 window.addEventListener("load", coordinatesHb);
-window.addEventListener("load", coordinatesHf);
+window.addEventListener("load", coordinatesFh);
 window.addEventListener("load", coordinatesWc);
 
 window.addEventListener("touchstart", touchHandler, false);
@@ -26,6 +25,15 @@ document.addEventListener("contextmenu", function(event){
 	return false;
 })
 
+function download_txt(textToSave) {
+
+  var hiddenElement = document.createElement('a');
+
+  hiddenElement.href = 'data:attachment/text,' + encodeURI(textToSave);
+  hiddenElement.target = '_blank';
+  hiddenElement.download = 'userRecording.txt';
+  hiddenElement.click();
+}
 
 function touchHandler(event){
 	if(event.touches.length > 1){
@@ -33,66 +41,59 @@ function touchHandler(event){
 	}
 }
 
-
+/*function done(event){
+{
+ var mouseX = event.touches[0].clientX;
+ var mouseY = event.touches[0].clientY;  
+  exes.push([mouseX]);
+  ys.push([mouseY]);
+ if(document.querySelector('#saveBtn').click()){
+ 	var text = "X values: " + exes + "\b" + "Y values: " + ys;
+ 	this.download_txt(text);
+ } 		
+}
+  document.getElementById("results").innerHTML = "You have clicked at: " + JSON.stringify(coords);
+}
+*/
 
 
 function coordinatesHb(event){
-	let coords = [];
-	let hbxpos = 1-(650-event.touches[0].clientX)/450;
-	let hbypos = (535-event.touches[0].clientY)/450;
-	
-	let r = Math.sqrt((hbxpos - 0.5)^2 + (hbypos - 0.5)^2);
-	let theta = Math.atan2(hbxpos, hbypos);
-	let phi = 2*(Math.PI)*Math.random() + theta;
-
-	let hbxTras = hbxpos*Math.cos(phi);
-	let hbyTras = hbypos*Math.sin(phi);
+	var hbxpos = 1-(650-event.touches[0].clientX)/450;
+	var hbypos = (535-event.touches[0].clientY)/450;
+		//document.getElementById("hbx").innerHTML = hbxpos;
+		//document.getElementById("hby").innerHTML = hbypos;
 	if(hbxpos >= 0 && hbxpos <= 1 && hbypos >= 0 && hbypos <= 1){
 	clientToServer({
 		name: "Hb",
-		x: hbxTras,
-		y: hbyTras
+		x: hbxpos,
+		y: hbypos
 	})
-	coords.push("Hb", r, theta, phi);
-	} return coords}
+	}}
 
 	function coordinatesWc(event){
-		var coords = [];
 		var fhxpos = 1-(1150-event.touches[0].clientX)/450;
 		var fhypos = (535-event.touches[0].clientY)/450;
-		let r = Math.sqrt((fhxpos - 0.5)^2 + (fxypos - 0.5)^2);
-		let theta = Math.atan2(fhxpos, fhypos);
-		let phi = 2*(Math.PI)*Math.random() + theta;
-
-		let fhxTras = fhxpos*Math.cos(phi);
-		let fhyTras = fhypos*Math.sin(phi);
+		//document.getElementById("fhx").innerHTML = fhxpos;
+		//document.getElementById("fhy").innerHTML = fhypos;
 		if(fhxpos >= 0 && fhxpos <= 1 && fhypos >= 0 && fhypos <= 1){
 		clientToServer({
 		name: "Wc",
-		x: fhxTras,
-		y: fhyTras
+		x: fhxpos,
+		y: fhypos
 	})
-	coords.push("Wc", r, theta, phi);
-	}return coords;}
-
+	}}
 	function coordinatesHf(event){
-		var coords = [];
 		var wcxpos = 1-(1750-event.touches[0].clientX)/450;
 		var wcypos = (530-event.touches[0].clientY)/450;
-		let r = Math.sqrt((wcxpos)^2 + (wcypos)^2);
-		let theta = Math.atan2(wcxpos, wcypos);
-		let phi = 2*(Math.PI)*Math.random() + theta;
-
-		let wcxTras = wcxpos*Math.cos(phi);
-		let wcyTras = wcypos*Math.sin(phi);
+		//document.getElementById("wcx").innerHTML = wcxpos;
+		//document.getElementById("wcy").innerHTML = wcypos;
 		if(wcxpos >= 0 && wcxpos <= 1 && wcypos >= 0 && wcypos <= 1){
 		clientToServer({
 		name: "Hf",
-		x: wcxTras,
-		y: wcyTras
+		x: wcxpos,
+		y: wcypos
 	})
-	coords.push("Hf", r, theta, phi);
-	}return coords;}
+	}}
 
 	function solo(value){
 		clientToServer({
@@ -101,34 +102,48 @@ function coordinatesHb(event){
 		})
 	}
 
+/*	function mixerHb(event){
+		var xHb = 1-(410-event.touches[0].clientX)/400;
+		clientToServer({
+			name: "mixHb",
+			x: xHb
+			}) 
+		}
+	
+	function mixerFh(event){
+		var xFh = 1-(830-event.touches[0].clientX)/400;
+		clientToServer({
+			name: "mixFh",
+			x: xFh
+			}) 
+	}
+	function mixerWc(event){
+		var xWc = 1-(1250-event.touches[0].clientX)/400;
+		clientToServer({
+			name: "mixWc",
+			x: xWc
+			}) 
+	}
+	function ambienceLevel(event){
+		var ambience = 1-(410-event.touches[0].clientX)/400;
+		clientToServer({
+			name: "mixAmb",
+			x: ambience
+			}) 
+	}
+	function pause(event){
+			clientToServer({
+		name: "pause",
+		})
+		}
+*/
 	function done(event){
-
-  
-	finalCoordsHb.push(this.coordinatesHb();
-	finalCoordsWc.push(this.coordinatesWc()));
- 	finalCoordsHf.push(this.coordinatesHf())); 
-	let csvData = [
-		[finalCoordsHb[0], finalCoordsHb[1], finalCoordsHb[2], finalCoordsHb[3]],
-		[finalCoordsWc[0], finalCoordsWc[1], finalCoordsWc[2], finalCoordsWc[3]],
-		[finalCoordsHf[0], finalCoordsHf[1], finalCoordsHf[2], finalCoordsHf[3]],
-	]
-	let csvContent = "data:text/csv;charset=utf-8,";
-	csvData.forEach(function(rowArray) {
-		let row = rowArray.join(",");
-		csvContent += row + "\r\n";
-		
-	});
-
-	let encodedUri = encodeURI(csvContent);
-	window.open(encodedUri);
-
 		clientToServer({
 			name: "I'm done",
 		})
 	}
 
 	function reset(event){
-		location.reload();
 		clientToServer({
 			name: "reset",
 		})
@@ -153,6 +168,22 @@ function coordinatesHb(event){
 				default:
 				break;
 			}
+
+
+
+
+
+/*
+	hoverboardCircle.addEventListener("mouseover", event => {
+		var xpos = event.offsetX;
+		var ypos = event.offsetY;
+		clientToServer({
+			name: "overHoverboard";
+			xpos: xpos;
+			ypos: ypos;
+		})
+	})*/
+
 }
 
 
